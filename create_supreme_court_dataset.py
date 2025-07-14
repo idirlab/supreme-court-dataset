@@ -10,7 +10,7 @@ def fetch_all_cases():
     all_cases = []
     page = 0
 
-    while True and page < 5:  # Limit to 1000 pages to avoid infinite loop
+    while True:  # Limit to 1000 pages to avoid infinite loop
         page += 1
         print(f"📄 Fetching page {page}...", end="", flush=True)
         resp = requests.get(BASE_URL, params={"page": page})
@@ -39,6 +39,7 @@ def get_case_details(case_term, case_docket):
     Returns (has_conclusion: bool, data: dict or None)
     """
     url = f"{CASE_WEB_URL}/{case_term}/{case_docket}"
+    print(url)
     try:
         resp = requests.get(url)
         if resp.status_code != 200:
@@ -57,8 +58,9 @@ def get_case_details(case_term, case_docket):
         def extract_div_text(ng_bind_key):
             tag = soup.find("div", attrs={"ng-bind-html": f"case.{ng_bind_key}"})
             if tag:
-                return tag.get_text(separator="\n", strip=True).replace("</p>", "")
-            return ""
+                text = tag.get_text(separator="\n", strip=True).replace("</p>", "")
+                return text if text else None
+            return None
 
         return True, {
             "facts": extract_div_text("facts_of_the_case"),
@@ -108,16 +110,28 @@ def main():
     valid_rows = []
     for idx, case in enumerate(cases):
         term = case.get("term")
-        docket = case.get("docket")
+        docket = case.get("docket_number")
         print(f"🔎 [{idx+1}/{len(cases)}] {term}/{docket}...", end=" ")
 
         has_conc, details = get_case_details(term, docket)
+        
+        # if not has_conc or details is None:
+        #     print("❌ Skipped.")
+        #     continue
 
         print("✅ Keeping.")
         row = extract_fields(case)
-        row["facts"] = details["facts"]
-        row["question"] = details["question"]
-        row["conclusion"] = details["conclusion"]
+        
+        # Handle case where details might be None
+        if details is not None:
+            row["facts"] = details["facts"]
+            row["question"] = details["question"]
+            row["conclusion"] = details["conclusion"]
+        else:
+            row["facts"] = None
+            row["question"] = None
+            row["conclusion"] = None
+            
         valid_rows.append(row)
 
     write_csv(valid_rows, OUT_CSV)

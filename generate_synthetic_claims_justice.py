@@ -7,7 +7,8 @@ import os
 prompt = """# Instructions:
 Carefully generate a truthful factual claim for this court case using natural-sounding language while avoiding highly technical language.
 Adhere to the following rules:
-- 
+- Do not use the case name in the claim.
+- Make the claim natural and easy to understand, so have a reasonable length.
  
 ## Output Format:
 Return the claim in a JSON object with the following format:

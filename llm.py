@@ -1,6 +1,6 @@
 import openai
 
-def prompt_vllm(prompt, model='Qwen/Qwen3-8B', think=True):
+def prompt_vllm(prompt, model='Qwen/Qwen3-30B-A3B-FP8', think=True):
     client = openai.OpenAI(
         api_key='EMPTY',
         base_url='http://localhost:8000/v1',  # Adjust the base URL if needed

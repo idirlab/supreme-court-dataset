@@ -1,20 +1,27 @@
-from llm import prompt_vllm
 import pandas as pd
 import json
 from tqdm import tqdm
-import os
+import argparse
+import subprocess
+import sys
 
-prompt = """# Instructions:
-Carefully generate a truthful factual claim for this court case using natural-sounding language while avoiding highly technical language.
+prompt_template = """# Instructions:
+Carefully generate 5 truthful factual claims for this court case using natural-sounding language while avoiding highly technical language.
+Make claims that extrapolate the implications of the court case, not specifically about the parties involved in the case.
 Adhere to the following rules:
-- Do not use the case name in the claim.
+- Do not use any part of the case name in the claim.
+- Don't make factual claims that are only applicable to the parties involved in the case.
 - Make the claim natural and easy to understand, so have a reasonable length.
  
 ## Output Format:
 Return the claim in a JSON object with the following format:
 ```json
 {{
-    "claim": "..."
+    "claim1": "...",
+    "claim2": "...",
+    "claim3": "...",
+    "claim4": "...",
+    "claim5": "..."
 }}
 ```
  
@@ -28,128 +35,114 @@ Return the claim in a JSON object with the following format:
 {conclusion}
 """
 
-def generate_claims(case, example_sentences, question, conclusion):
-    formatted_prompt = prompt.format(
-        case=case,
+def create_openai_message(example_sentences: str, question: str, conclusion: str) -> dict:
+    """Create a single-user message in OpenAI chat JSON format"""
+    formatted_prompt = prompt_template.format(
         example_sentences=example_sentences,
         question=question,
         conclusion=conclusion
     )
-    
-    return prompt_vllm(formatted_prompt)
+    return {"body": {"messages": [{"role": "user", "content": formatted_prompt}]}}
 
-def process_dataset():
-    """Process the entire dataset and generate claims for all Supreme Court cases"""
-    
-    # Load the dataset
-    print("Loading clean_data_with_details.csv...")
-    df = pd.read_csv('clean_data_with_details.csv')
-    
-    # Check if output file already exists to resume processing
-    output_file = 'sc_claims.csv'
-    if os.path.exists(output_file):
-        print("Found existing sc_claims.csv, loading to resume processing...")
-        existing_df = pd.read_csv(output_file)
-        processed_indices = existing_df.index.tolist()
-        print(f"Resuming from {len(processed_indices)} already processed cases")
-        df = existing_df.copy()
-    else:
-        # Add new column for generated claims
-        df['generated_claim'] = None
-        processed_indices = []
-    
-    # Find cases that need processing
-    unprocessed_mask = df['generated_claim'].isna()
-    unprocessed_indices = df[unprocessed_mask].index.tolist()
-    
-    if not unprocessed_indices:
-        print("All cases already processed!")
-        return
-    
-    print(f"Processing {len(unprocessed_indices)} cases...")
-    
-    # Process each case
-    for idx in tqdm(unprocessed_indices, desc="Generating claims"):
-        row = df.iloc[idx]
-        
-        # Skip if missing required data
-        if pd.isna(row['api_question']) or pd.isna(row['api_conclusion']) or pd.isna(row['facts']):
-            print(f"Skipping case {idx} ({row['name']}) - missing required data")
-            df.at[idx, 'generated_claim'] = "MISSING_DATA"
+
+def create_jsonl_dataset(input_csv: str, output_jsonl: str) -> int:
+    """Generate a JSONL file; returns number of entries."""
+    print(f"Loading {input_csv}...")
+    df = pd.read_csv(input_csv)
+    entries = []
+
+    print(f"Processing {len(df)} cases...")
+    for idx, row in tqdm(df.iterrows(), total=len(df), desc="Creating prompts"):
+        if pd.isna(row.get('api_question')) or pd.isna(row.get('api_conclusion')) or pd.isna(row.get('facts')):
             continue
-        
-        try:
-            # Prepare the case information
-            case_name = row['name']
-            facts = row['facts']
-            question = row['api_question']
-            conclusion = row['api_conclusion']
-            
-            # Create case summary
-            case_summary = f"Case: {case_name}\nFacts: {facts}"
-            
-            # Generate claim using the existing function
-            response = generate_claims(
-                case=case_summary,
-                example_sentences=facts,  # Using facts as example sentences
-                question=question,
-                conclusion=conclusion
-            )
-            
-            # Try to parse JSON response
-            try:
-                if response.strip().startswith('{'):
-                    claim_data = json.loads(response)
-                    claim = claim_data.get('claim', response)
-                else:
-                    # If not JSON, try to extract claim from response
-                    if '"claim"' in response:
-                        # Extract claim from JSON-like response
-                        start = response.find('"claim"') + len('"claim"')
-                        start = response.find('"', start) + 1
-                        end = response.find('"', start)
-                        claim = response[start:end] if end > start else response
-                    else:
-                        claim = response.strip()
-                
-                df.at[idx, 'generated_claim'] = claim
-                
-            except json.JSONDecodeError:
-                # If JSON parsing fails, store the raw response
-                df.at[idx, 'generated_claim'] = response.strip()
-            
-        except Exception as e:
-            print(f"Error processing case {idx} ({row['name']}): {str(e)}")
-            df.at[idx, 'generated_claim'] = f"ERROR: {str(e)}"
-        
-        # Save progress every 10 cases
-        if (idx + 1) % 10 == 0:
-            df.to_csv(output_file, index=False)
-    
-    # Final save
-    print(f"Saving final results to {output_file}...")
-    df.to_csv(output_file, index=False)
-    
-    # Print statistics
-    successful_claims = df[df['generated_claim'].notna() & 
-                         ~df['generated_claim'].str.startswith('ERROR') & 
-                         (df['generated_claim'] != 'MISSING_DATA')].shape[0]
-    
-    print(f"\nProcessing complete!")
-    print(f"Total cases: {len(df)}")
-    print(f"Successful claims generated: {successful_claims}")
-    print(f"Missing data: {(df['generated_claim'] == 'MISSING_DATA').sum()}")
-    print(f"Errors: {df['generated_claim'].str.startswith('ERROR').sum()}")
-    
-    # Show sample of generated claims
-    print(f"\nSample generated claims:")
-    sample_claims = df[df['generated_claim'].notna() & 
-                      ~df['generated_claim'].str.startswith('ERROR') & 
-                      (df['generated_claim'] != 'MISSING_DATA')]['generated_claim'].head(3)
-    
-    for i, claim in enumerate(sample_claims, 1):
-        print(f"{i}. {claim}")
 
-# Run the processing
-if __name__ == "__main__":
-    process_dataset()
+        msg = create_openai_message(
+            example_sentences=row['facts'],
+            question=row['api_question'],
+            conclusion=row['api_conclusion']
+        )
+        entries.append(msg)
+
+    print(f"Writing {len(entries)} prompts to {output_jsonl}...")
+    with open(output_jsonl, 'w') as f:
+        for entry in entries:
+            f.write(json.dumps(entry) + '\n')
+
+    print(f"Created {len(entries)} prompts.")
+    return len(entries)
+
+
+def process_batch_results(jsonl_results_file: str, output_csv: str, input_csv: str):
+    """Process vLLM batch inference JSONL into CSV with claims and raw response."""
+    print(f"Processing batch results from {jsonl_results_file}...")
+    df = pd.read_csv(input_csv)
+
+    # Initialize columns
+    for i in range(1, 6):
+        df[f'generated_claim{i}'] = None
+    df['raw_response'] = None
+
+    results = []
+    with open(jsonl_results_file, 'r') as f:
+        for line in f:
+            results.append(json.loads(line))
+
+    processed = 0
+    for res in results:
+        content = None
+        # vLLM generate output format
+        try:
+            content = res['outputs'][0]['text']
+        except Exception:
+            print(f"Unable to extract text for entry: {res}")
+            continue
+
+        idx = processed  # assumes same order
+        df.at[idx, 'raw_response'] = content
+        # parse JSON claims
+        try:
+            claim_data = json.loads(content)
+            for i in range(1, 6):
+                key = f'claim{i}'
+                if key in claim_data:
+                    df.at[idx, f'generated_claim{i}'] = claim_data[key]
+        except json.JSONDecodeError:
+            # fallback simple extraction
+            for i in range(1,6):
+                pat = f'"claim{i}"'
+                if pat in content:
+                    start = content.find(pat) + len(pat)
+                    start = content.find('"', start) + 1
+                    end = content.find('"', start)
+                    if end > start:
+                        df.at[idx, f'generated_claim{i}'] = content[start:end]
+        processed += 1
+
+    df.to_csv(output_csv, index=False)
+    print(f"Saved processed claims to {output_csv}.")
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(
+        description='Full pipeline: create prompts, run vLLM batch, and process results'
+    )
+    parser.add_argument('--input-csv', default='clean_data_with_details.csv', help='Input CSV with case data')
+    parser.add_argument('--prompts-jsonl', default='prompts.jsonl', help='Intermediate prompts JSONL')
+    parser.add_argument('--results-jsonl', default='results.jsonl', help='vLLM output JSONL')
+    parser.add_argument('--output-csv', default='claims.csv', help='Final CSV with claims')
+    parser.add_argument('--model', required=True, help='Model name/path for vLLM')
+    parser.add_argument('--devices', required=True, help='Comma-separated CUDA device IDs')
+    parser.add_argument('--max-tokens', type=int, default=5000, help='Max tokens per generation')
+    parser.add_argument('--temperature', type=float, default=0.7)
+    parser.add_argument('--top-p', type=float, default=0.9)
+    args = parser.parse_args()
+
+    # 1. Create prompts
+    n = create_jsonl_dataset(args.input_csv, args.prompts_jsonl)
+    if n == 0:
+        print("No prompts to process. Exiting.")
+        sys.exit(1)
+
+
+    # 3. Process results
+    process_batch_results(args.results_jsonl, args.output_csv, args.input_csv)

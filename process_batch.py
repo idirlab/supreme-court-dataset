@@ -56,4 +56,4 @@ def process_batch_results(jsonl_path, output_csv_path, metadata_csv_path=None):
     print(f"Saved {len(df)} results to: {output_csv_path}")
 
 
-process_batch_results("outputs.jsonl", "sc-claims_v3.csv", "clean_data_with_details.csv")
+process_batch_results("outputs.jsonl", "sc-claims_v4.csv", "clean_data_with_details.csv")

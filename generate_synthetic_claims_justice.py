@@ -124,17 +124,10 @@ def process_batch_results(jsonl_results_file: str, output_csv: str, input_csv: s
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='Full pipeline: create prompts, run vLLM batch, and process results'
+        description='Create prompts JSONL file for vLLM batch inference'
     )
     parser.add_argument('--input-csv', default='clean_data_with_details.csv', help='Input CSV with case data')
-    parser.add_argument('--prompts-jsonl', default='prompts.jsonl', help='Intermediate prompts JSONL')
-    parser.add_argument('--results-jsonl', default='results.jsonl', help='vLLM output JSONL')
-    parser.add_argument('--output-csv', default='claims.csv', help='Final CSV with claims')
-    parser.add_argument('--model', required=True, help='Model name/path for vLLM')
-    parser.add_argument('--devices', required=True, help='Comma-separated CUDA device IDs')
-    parser.add_argument('--max-tokens', type=int, default=5000, help='Max tokens per generation')
-    parser.add_argument('--temperature', type=float, default=0.7)
-    parser.add_argument('--top-p', type=float, default=0.9)
+    parser.add_argument('--prompts-jsonl', default='prompts.jsonl', help='Output prompts JSONL file')
     args = parser.parse_args()
 
     # 1. Create prompts
@@ -142,7 +135,6 @@ if __name__ == '__main__':
     if n == 0:
         print("No prompts to process. Exiting.")
         sys.exit(1)
-
-
-    # 3. Process results
-    process_batch_results(args.results_jsonl, args.output_csv, args.input_csv)
+    
+    print(f"Successfully created {args.prompts_jsonl} with {n} prompts.")
+    print("You can now run vLLM batch inference manually with this file.")

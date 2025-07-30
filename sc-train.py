@@ -1,17 +1,18 @@
 import pandas as pd
+import os
 import numpy as np
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import torch
 import torch.nn as nn
 from sentence_transformers import SentenceTransformer, InputExample, losses
 from torch.utils.data import DataLoader
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
-import os
 from tqdm import tqdm
 import random
 
 class SemanticSimilarityTrainer:
-    def __init__(self, csv_file='sc-claims_v3.csv', model_name='Qwen/Qwen3-Embedding-8B'):
+    def __init__(self, csv_file='sc-claims_v3.csv', model_name='Qwen/Qwen3-Embedding-0.6B'):
         """
         Initialize the semantic similarity trainer
         
@@ -27,8 +28,6 @@ class SemanticSimilarityTrainer:
             self.device = torch.device('cuda:0')
             # Set CUDA_VISIBLE_DEVICES to use only first GPU
             os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-            # Set CUDA memory allocation configuration for better memory management
-            os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
         else:
             self.device = torch.device('cpu')
             
@@ -129,6 +128,8 @@ class SemanticSimilarityTrainer:
         train_loss = losses.CosineSimilarityLoss(self.model)
         
         print(f"Training model for {epochs} epochs...")
+        torch.cuda.empty_cache()
+
         
         # Train the model with single GPU to avoid DataParallel issues
         self.model.fit(
@@ -443,10 +444,10 @@ def main():
     torch.manual_seed(42)
     
     # Initialize trainer
-    trainer = SemanticSimilarityTrainer('sc-claims_v3.csv')
-    
-    model_path = './ssm/sc_semantic_model_qwen3'
-    
+    trainer = SemanticSimilarityTrainer('sc-claims_v4.csv')
+
+    model_path = './ssm/sc_semantic_model_qwen3-0.6B1'
+
     # Check if trained model already exists
     if trainer.model_exists(model_path):
         print("Trained model found! Loading existing model and skipping training...")
@@ -459,7 +460,7 @@ def main():
         print("No trained model found. Starting training...")
         
         # Train the model using claims 1-4
-        trainer.train_model(claim_columns=['claim_1', 'claim_2', 'claim_3', 'claim_4'], epochs=4, batch_size=4)
+        trainer.train_model(claim_columns=['claim_1', 'claim_2', 'claim_3', 'claim_4'], epochs=5, batch_size=8)
         
         # Save the model
         trainer.save_model(model_path)

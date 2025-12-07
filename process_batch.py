@@ -139,29 +139,59 @@ def process_batch_results(jsonl_path: str, output_csv_path: str, metadata_csv_pa
     # 2) Save claims CSV in current directory named by input (base)_claims.csv
     claims_out_path = os.path.join(".", f"{base}_claims.csv")
 
-    claims_df = df[["raw_response"] + claim_cols].copy()
-
-    # Merge selected metadata columns if provided and present
+    # Long format: each row is a single claim with associated case_name and docket
+    long_rows = []
+    # Load metadata (optional) to attach case_name and docket
+    metadata_df = None
+    meta_case_col = None
+    meta_docket_col = None
     if metadata_csv_path:
         try:
             metadata_df = pd.read_csv(metadata_csv_path)
-            # Try to include common identifiers
-            meta_cols = [c for c in metadata_df.columns if c.lower() in {"case_name", "docket", "court", "id"}]
-            if not meta_cols:
-                # If not found, include all metadata to preserve association
-                meta_cols = list(metadata_df.columns)
-            claims_df = pd.concat([metadata_df[meta_cols].reset_index(drop=True),
-                                   claims_df.reset_index(drop=True)], axis=1)
+            # Normalize column names for matching
+            lower_map = {c.lower(): c for c in metadata_df.columns}
+            # Use 'name' column from metadata (case name)
+            meta_case_col = lower_map.get("name")
+            meta_docket_col = lower_map.get("docket")
         except Exception as e:
-            print(f"Warning: Failed to merge metadata: {e}")
+            print(f"Warning: Failed to load metadata: {e}")
+            metadata_df = None
 
-    claims_df.to_csv(claims_out_path, index=False)
-    print(f"Saved claims to: {claims_out_path}")
+    # Iterate rows and collect non-empty claims
+    for i, row in df.iterrows():
+        case_name = None
+        docket = None
+        if metadata_df is not None and meta_case_col and meta_docket_col:
+            if i < len(metadata_df):
+                case_name = metadata_df.iloc[i].get(meta_case_col)
+                docket = metadata_df.iloc[i].get(meta_docket_col)
+        # Fallbacks
+        case_name = case_name if isinstance(case_name, str) else ""
+        docket = docket if isinstance(docket, str) else ""
+
+        for c in claim_cols:
+            val = row.get(c, "")
+            if isinstance(val, float) and pd.isna(val):
+                val = ""
+            if isinstance(val, str):
+                text = val.strip()
+            else:
+                text = str(val).strip() if val is not None else ""
+            if text:
+                long_rows.append({
+                    "name": case_name,
+                    "docket": docket,
+                    "claim": text
+                })
+
+    claims_long_df = pd.DataFrame(long_rows, columns=["name", "docket", "claim"])
+    claims_long_df.to_csv(claims_out_path, index=False)
+    print(f"Saved claims (long format) to: {claims_out_path}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Safely process batch vLLM results into CSV")
-    parser.add_argument("--input", type=str, default="results.jsonl", help="Path to JSONL results")
+    parser.add_argument("--input", type=str, default="results_80B.jsonl", help="Path to JSONL results")
     parser.add_argument("--output", type=str, default="sc-claims_v1.csv", help="Path to output CSV")
     parser.add_argument("--metadata", type=str, default="clean_data_with_details.csv", help="Optional metadata CSV to merge")
     args = parser.parse_args()

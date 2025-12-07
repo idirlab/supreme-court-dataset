@@ -131,3 +131,4 @@ models/
 ssm/
 *.csv
 CSCI_544_Project_Report/
+*.jsonl

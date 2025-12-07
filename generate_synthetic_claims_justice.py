@@ -6,27 +6,28 @@ import subprocess
 import sys
 
 prompt_template = """# Instructions:
-Carefully generate 5 truthful factual claims for this court case using natural-sounding language while avoiding highly technical language.
-Make claims that extrapolate the implications of the court case, not specifically about the parties involved in the case.
+Generate truthful, factual claims about the legal implications of this case using simple, everyday language.
+Avoid legal jargon or court-report phrasing. Do not use phrases like "the court found," "the decision clarified," or "under this test."
+Write claims as clear statements of what the law allows or does not allow.
 Adhere to the following rules:
-- Do not use any part of the case name in the claim.
-- Don't make factual claims that are only applicable to the parties involved in the case.
-- Make the claim natural and easy to understand, so have a reasonable length.
- 
+- Do not use any part of the case name or other identifying information in the claim.
+- Do not make claims that only apply to the parties in this case; claims must be general legal principles.
+- Keep each claim focused on one central idea and make it easy to understand.
+- Each claim must be distinct from the others; do not repeat the same core idea.
+- Use direct, plain wording rather than legal formulations.
+
 ## Output Format:
 Return the claim in a JSON object with the following format:
 ```json
 {{
     "claim1": "...",
     "claim2": "...",
-    "claim3": "...",
-    "claim4": "...",
-    "claim5": "..."
+    ...
 }}
 ```
- 
+
 ## Facts:
-{example_sentences}
+{facts}
  
 # Question:
 {question}
@@ -35,10 +36,10 @@ Return the claim in a JSON object with the following format:
 {conclusion}
 """
 
-def create_openai_message(example_sentences: str, question: str, conclusion: str) -> dict:
+def create_openai_message(facts: str, question: str, conclusion: str) -> dict:
     """Create a single-user message in OpenAI chat JSON format"""
     formatted_prompt = prompt_template.format(
-        example_sentences=example_sentences,
+        facts=facts,
         question=question,
         conclusion=conclusion
     )
@@ -57,7 +58,7 @@ def create_jsonl_dataset(input_csv: str, output_jsonl: str) -> int:
             continue
 
         msg = create_openai_message(
-            example_sentences=row['facts'],
+            facts=row['facts'],
             question=row['api_question'],
             conclusion=row['api_conclusion']
         )

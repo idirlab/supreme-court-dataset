@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, required=True, help="Model name or path")
-    parser.add_argument("--prompts", type=str, default="prompts.jsonl", help="Path to prompts JSONL (OpenAI format)")
+    parser.add_argument("--prompts", type=str, required=True, help="Path to prompts JSONL (OpenAI format)")
     parser.add_argument("--output", type=str, default="outputs.jsonl", help="Output file")
     parser.add_argument("--max_tokens", type=int, default=None)
     parser.add_argument("--temperature", type=float, default=0.6)
@@ -26,37 +26,35 @@ def load_prompts(path, tokenizer):
         prompts.append(prompt)
     return prompts
 
-def main():
-    args = parse_args()
+# def main():
+args = parse_args()
 
-    assert args.gpus == len(args.devices.split(",")), "Number of GPUs must match number of devices specified"
+assert args.gpus == len(args.devices.split(",")), "Number of GPUs must match number of devices specified"
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.devices
+os.environ["CUDA_VISIBLE_DEVICES"] = args.devices
 
-    # Load tokenizer for chat template
-    tokenizer = AutoTokenizer.from_pretrained(args.model)
+# Load tokenizer for chat template
+tokenizer = AutoTokenizer.from_pretrained(args.model)
 
-    # Load prompts
-    prompts = load_prompts(args.prompts, tokenizer)
+# Load prompts
+prompts = load_prompts(args.prompts, tokenizer)
 
-    # Setup vllm
-    llm = LLM(model=args.model, tensor_parallel_size=args.gpus, max_model_len=args.max_tokens, enable_expert_parallel=True, quantization="fp8")
-    sampling_params = SamplingParams(
-        max_tokens=args.max_tokens,
-        temperature=args.temperature,
-        top_p=args.top_p
-    )
+# Setup vllm
+llm = LLM(model=args.model, tensor_parallel_size=args.gpus, max_model_len=args.max_tokens, enable_expert_parallel=False)
+sampling_params = SamplingParams(
+    max_tokens=args.max_tokens,
+    temperature=args.temperature,
+    top_p=args.top_p
+)
 
-    # Inference
-    outputs = llm.generate(prompts, sampling_params)
-    results = []
-    for prompt, output in zip(prompts, outputs):
-        results.append({
-            "prompt": prompt,
-            "output": output#.outputs[0].text
-        })
-    # Save results
-    pd.DataFrame(results).to_json(args.output, orient="records", lines=True)
+# Inference
+outputs = llm.generate(prompts, sampling_params)
+results = []
+for prompt, output in zip(prompts, outputs):
+    results.append({
+        "prompt": prompt,
+        "output": output.outputs[0].text
+    })
 
-if __name__ == "__main__":
-    main()
+# Save results
+pd.DataFrame(results).to_json(args.output, orient="records", lines=True)

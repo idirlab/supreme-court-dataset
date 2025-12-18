@@ -34,7 +34,7 @@ def main():
     assert args.gpus == len(args.devices.split(",")), "Number of GPUs must match number of devices specified"
     os.environ["CUDA_VISIBLE_DEVICES"] = args.devices
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model)
+    tokenizer = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
     prompts = load_prompts(args.prompts, tokenizer)
 
     max_model_len = args.max_model_len if args.max_model_len is not None else args.max_tokens
@@ -49,7 +49,7 @@ def main():
         enable_expert_parallel=True,  # keep EP on for MoE
         dtype=args.dtype,
         gpu_memory_utilization=args.gpu_memory_utilization,
-        quantization="fp8",
+        trust_remote_code=True,
     )
     sampling_params = SamplingParams(
         max_tokens=args.max_tokens,

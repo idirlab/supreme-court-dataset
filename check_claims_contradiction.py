@@ -5,8 +5,8 @@ import itertools
 from tqdm import tqdm
 import re
 
-PROMPT_TEMPLATE = """You are a legal expert. Read two short claims about a case plus the case facts, question, and conclusion. Decide whether the two claims are saying the same thing (being redundant) or are meaningfully different regarding their meaning.
-You must output an explanation for your decision in the "explanation" field. Then, also provide a decision in the "overlap" field: "redundant" if the claims are redundant, and "different" if they are not.
+PROMPT_TEMPLATE = """You are a legal expert. Read two short claims about a case plus the case facts, question, and conclusion. Decide whether the two claims are contradicting (negation or opposite entailment), or consistent (when they are unrelated or entail).
+You must output an explanation for your decision in the "explanation" field. Then, also provide a decision in the "contradiction" field: "contradiction" if the claims are contradicting, and "consistent" if they are not.
 
 Claim 1: {claim1}
 Claim 2: {claim2}
@@ -21,7 +21,7 @@ Return a JSON object in the following format:
 ```json
 {{
     "explanation": "...",
-    "overlap": "<redundant/different>",
+    "contradiction": "<contradiction/consistent>",
     ...
 }}
 ```
@@ -174,12 +174,12 @@ def process_results(results_file, claims_file, output_csv):
         decision_val = False
         
         if parsed:
-            decision_val = parsed.get("overlap", False)
+            decision_val = parsed.get("contradiction", False)
             explanation = parsed.get("explanation", "")
             
             if isinstance(decision_val, str):
                 decision_lower = decision_val.lower()
-                decision = "redundant" in decision_lower or "true" == decision_lower
+                decision = "contradiction" in decision_lower or "true" == decision_lower
             elif isinstance(decision_val, bool):
                 decision = decision_val
         else:
@@ -190,7 +190,7 @@ def process_results(results_file, claims_file, output_csv):
                 "case_name": case_name,
                 "claim_1": c1,
                 "claim_2": c2,
-                "decision": decision_val if parsed else "Error",
+                "contradiction": decision_val if parsed else "Error",
                 "explanation": explanation
             })
             
@@ -206,14 +206,14 @@ if __name__ == "__main__":
     gen_parser = subparsers.add_parser("generate")
     gen_parser.add_argument("--claims-file", default="results_80B_claims.csv")
     gen_parser.add_argument("--metadata-file", default="clean_data_with_details.csv")
-    gen_parser.add_argument("--output-prompts", default="overlap_prompts.jsonl")
-    gen_parser.add_argument("--output-metadata", default="overlap_test_set.jsonl")
+    gen_parser.add_argument("--output-prompts", default="contradiction_prompts.jsonl")
+    gen_parser.add_argument("--output-metadata", default="contradiction_test_set.jsonl")
 
     proc_parser = subparsers.add_parser("process")
-    proc_parser.add_argument("--results-file", required=True)
+    proc_parser.add_argument("--results-file", default="contradiction_output_vllm.jsonl")
     proc_parser.add_argument("--metadata-file", required=False, help="Ignored in new version")
     proc_parser.add_argument("--claims-file", default="results_80B_claims.csv")
-    proc_parser.add_argument("--output-csv", default="overlapping_claims.csv")
+    proc_parser.add_argument("--output-csv", default="contradicted_claims.csv")
     
     args = parser.parse_args()
     

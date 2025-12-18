@@ -34,7 +34,7 @@ assert args.gpus == len(args.devices.split(",")), "Number of GPUs must match num
 os.environ["CUDA_VISIBLE_DEVICES"] = args.devices
 
 # Load tokenizer for chat template
-tokenizer = AutoTokenizer.from_pretrained(args.model)
+tokenizer = AutoTokenizer.from_pretrained(args.model, token=os.environ.get("HUGGINGFACE_TOKEN"),)
 
 # Load prompts
 prompts = load_prompts(args.prompts, tokenizer)
@@ -44,7 +44,8 @@ llm = LLM(model=args.model, tensor_parallel_size=args.gpus, max_model_len=args.m
 sampling_params = SamplingParams(
     max_tokens=args.max_tokens,
     temperature=args.temperature,
-    top_p=args.top_p
+    top_p=args.top_p,
+    token=os.environ.get("HUGGINGFACE_TOKEN"),
 )
 
 # Inference

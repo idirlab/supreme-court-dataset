@@ -133,10 +133,10 @@ ssm/
 CSCI_544_Project_Report/
 *.jsonl
 prompt_engineering.py
+/*.csv
 
 !similarity_report_80B.csv
 !claims_raw.csv
-/*.csv
 
 # Ignore failed results directories
 failed/

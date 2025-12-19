@@ -100,12 +100,51 @@ def extract_json_claims(raw_response: str) -> Dict[str, str]:
     return {f"claim_{i}": "" for i in range(1, 6)}
 
 
+def extract_prompt_text(item: Dict[str, Any]) -> str:
+    # Try 'prompt' field
+    if "prompt" in item and isinstance(item["prompt"], str):
+        return item["prompt"]
+    
+    # Try 'body' -> 'messages' (OpenAI chat format)
+    if "body" in item and isinstance(item["body"], dict):
+        body = item["body"]
+        if "messages" in body and isinstance(body["messages"], list):
+            for msg in body["messages"]:
+                if msg.get("role") == "user":
+                    return msg.get("content", "")
+    
+    # Try direct 'messages'
+    if "messages" in item and isinstance(item["messages"], list):
+        for msg in item["messages"]:
+            if msg.get("role") == "user":
+                return msg.get("content", "")
+                
+    return ""
+
+
+def extract_conclusion(text: str) -> str:
+    # Look for "# Conclusion:" followed by text
+    if not text:
+        return ""
+    # Use non-greedy match to capture content before <|im_end|> or end of string
+    match = re.search(r"# Conclusion:\s*(.*?)(?:<\|im_end\|>|$)", text, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    return ""
+
+
 def process_line(item: Dict[str, Any]) -> Dict[str, Any]:
     raw_output = item.get("output")
     raw_response = normalize_response(raw_output)
     claims = extract_json_claims(raw_response)
+    
+    # Extract conclusion for matching
+    prompt_text = extract_prompt_text(item)
+    conclusion = extract_conclusion(prompt_text)
+
     return {
         "raw_response": raw_response.strip(),
+        "extracted_conclusion": conclusion,
         **claims
     }
 
@@ -145,6 +184,8 @@ def process_batch_results(jsonl_path: str, output_csv_path: str, metadata_csv_pa
     metadata_df = None
     meta_case_col = None
     meta_docket_col = None
+    conclusion_map = {}
+
     if metadata_csv_path:
         try:
             metadata_df = pd.read_csv(metadata_csv_path)
@@ -153,6 +194,17 @@ def process_batch_results(jsonl_path: str, output_csv_path: str, metadata_csv_pa
             # Use 'name' column from metadata (case name)
             meta_case_col = lower_map.get("name")
             meta_docket_col = lower_map.get("docket")
+            
+            # Build conclusion map
+            meta_conc_col = lower_map.get("api_conclusion")
+            if meta_conc_col:
+                for idx, m_row in metadata_df.iterrows():
+                    val = m_row.get(meta_conc_col)
+                    if isinstance(val, str) and val.strip():
+                        conclusion_map[val.strip()] = m_row
+            else:
+                print("Warning: 'api_conclusion' column not found in metadata. Matching by conclusion disabled.")
+
         except Exception as e:
             print(f"Warning: Failed to load metadata: {e}")
             metadata_df = None
@@ -161,10 +213,16 @@ def process_batch_results(jsonl_path: str, output_csv_path: str, metadata_csv_pa
     for i, row in df.iterrows():
         case_name = None
         docket = None
-        if metadata_df is not None and meta_case_col and meta_docket_col:
-            if i < len(metadata_df):
-                case_name = metadata_df.iloc[i].get(meta_case_col)
-                docket = metadata_df.iloc[i].get(meta_docket_col)
+        
+        # Attempt match by conclusion
+        extracted_conc = row.get("extracted_conclusion")
+        if isinstance(extracted_conc, str) and extracted_conc and extracted_conc in conclusion_map:
+            meta_row = conclusion_map[extracted_conc]
+            if meta_case_col:
+                case_name = meta_row.get(meta_case_col)
+            if meta_docket_col:
+                docket = meta_row.get(meta_docket_col)
+        
         # Fallbacks
         case_name = case_name if isinstance(case_name, str) else ""
         docket = docket if isinstance(docket, str) else ""
@@ -192,7 +250,7 @@ def process_batch_results(jsonl_path: str, output_csv_path: str, metadata_csv_pa
 def main():
     parser = argparse.ArgumentParser(description="Safely process batch vLLM results into CSV")
     parser.add_argument("--input", type=str, default="results_80B.jsonl", help="Path to JSONL results")
-    parser.add_argument("--output", type=str, default="sc-claims_v1.csv", help="Path to output CSV")
+    parser.add_argument("--output", type=str, default="claims_raw.csv", help="Path to output CSV")
     parser.add_argument("--metadata", type=str, default="clean_data_with_details.csv", help="Optional metadata CSV to merge")
     args = parser.parse_args()
 

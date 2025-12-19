@@ -204,16 +204,16 @@ if __name__ == "__main__":
     subparsers = parser.add_subparsers(dest="mode", required=True)
     
     gen_parser = subparsers.add_parser("generate")
-    gen_parser.add_argument("--claims-file", default="results_80B_claims.csv")
-    gen_parser.add_argument("--metadata-file", default="clean_data_with_details.csv")
-    gen_parser.add_argument("--output-prompts", default="contradiction_prompts.jsonl")
-    gen_parser.add_argument("--output-metadata", default="contradiction_test_set.jsonl")
+    gen_parser.add_argument("--claims-file", default="../claims_raw.csv")
+    gen_parser.add_argument("--metadata-file", default="../clean_data_with_details.csv")
+    gen_parser.add_argument("--output-prompts", default="../contradiction_prompts.jsonl")
+    gen_parser.add_argument("--output-metadata", default="../contradiction_test_set.jsonl")
 
     proc_parser = subparsers.add_parser("process")
-    proc_parser.add_argument("--results-file", default="contradiction_output_vllm.jsonl")
+    proc_parser.add_argument("--results-file", default="../contradiction_output_vllm.jsonl")
     proc_parser.add_argument("--metadata-file", required=False, help="Ignored in new version")
-    proc_parser.add_argument("--claims-file", default="results_80B_claims.csv")
-    proc_parser.add_argument("--output-csv", default="contradicted_claims.csv")
+    proc_parser.add_argument("--claims-file", default="../claims_raw.csv")
+    proc_parser.add_argument("--output-csv", default="../results/contradicted_claims.csv")
     
     args = parser.parse_args()
     

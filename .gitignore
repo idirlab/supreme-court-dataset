@@ -130,10 +130,12 @@ models/
 *.pkl
 *.model
 ssm/
-*.csv
 CSCI_544_Project_Report/
 *.jsonl
 prompt_engineering.py
 
 !similarity_report_80B.csv
 !claims_raw.csv
+
+# Ignore failed results directories
+failed/

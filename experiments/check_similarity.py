@@ -27,8 +27,8 @@ def get_embeddings(model, tokenizer, texts, batch_size=32, device="cuda"):
 
 def main():
     parser = argparse.ArgumentParser(description="Check semantic similarity between claims")
-    parser.add_argument("--input", type=str, default="results_80B_claims.csv", help="Input CSV file")
-    parser.add_argument("--output", type=str, default="similarity_report.csv", help="Output CSV file")
+    parser.add_argument("--input", type=str, default="../claims_raw.csv", help="Input CSV file")
+    parser.add_argument("--output", type=str, default="../results/similarity_report.csv", help="Output CSV file")
     parser.add_argument("--model", type=str, default="Qwen/Qwen3-Embedding-8B", help="HuggingFace model name")
     parser.add_argument("--threshold", type=float, default=0.85, help="Similarity threshold")
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size")

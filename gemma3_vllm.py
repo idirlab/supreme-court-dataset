@@ -14,13 +14,20 @@ for path in sys.path:
         os.environ["TVM_LIBRARY_PATH"] = os.path.join(path, "tvm_ffi")
         break
 
+# Additional workaround: remove /usr/local/sbin from PATH to avoid PermissionError
+# tvm_ffi searches in PATH and crashes if it encounters a permission error
+if "PATH" in os.environ:
+    paths = os.environ["PATH"].split(os.pathsep)
+    paths = [p for p in paths if p != "/usr/local/sbin"]
+    os.environ["PATH"] = os.pathsep.join(paths)
+
 from vllm import LLM, SamplingParams
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="google/gemma-3-27b-it")
-    parser.add_argument("--prompts", type=str, default="contradiction_prompts.jsonl")
-    parser.add_argument("--output", type=str, default="contradiction_output_vllm.jsonl")
+    parser.add_argument("--prompts", type=str, default="factuality_prompts.jsonl")
+    parser.add_argument("--output", type=str, default="factuality_output_vllm.jsonl")
     parser.add_argument("--tp", type=int, default=1, help="Tensor parallel size (number of GPUs to use)")
     return parser.parse_args()
 

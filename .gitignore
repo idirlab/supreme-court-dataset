@@ -132,3 +132,5 @@ ssm/
 *.csv
 CSCI_544_Project_Report/
 *.jsonl
+
+!similarity_report_80B.csv

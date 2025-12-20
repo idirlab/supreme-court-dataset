@@ -26,8 +26,8 @@ from vllm import LLM, SamplingParams
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="google/gemma-3-27b-it")
-    parser.add_argument("--prompts", type=str, default="factuality_naive_prompts.jsonl")
-    parser.add_argument("--output", type=str, default="factuality_naive_output_vllm.jsonl")
+    parser.add_argument("--prompts", type=str, default="subsampled_claims_for_contradiction_analysis.jsonl")
+    parser.add_argument("--output", type=str, default="subsampled_claims_for_contradiction_analysis_vllm.jsonl")
     parser.add_argument("--tp", type=int, default=1, help="Tensor parallel size (number of GPUs to use)")
     return parser.parse_args()
 

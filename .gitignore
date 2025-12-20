@@ -137,6 +137,7 @@ prompt_engineering.py
 
 !similarity_report_80B.csv
 !claims_raw.csv
+!factual_claims.csv
 
 # Ignore failed results directories
 failed/

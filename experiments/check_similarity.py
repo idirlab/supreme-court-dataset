@@ -36,6 +36,27 @@ def main():
 
     print(f"Loading data from {args.input}...")
     df = pd.read_csv(args.input)
+
+    # Fix for filtered_claims.csv which uses 'case_name' instead of 'name'
+    if "name" not in df.columns and "case_name" in df.columns:
+        print("Renaming 'case_name' to 'name'...")
+        df["name"] = df["case_name"]
+
+    # Fix for missing 'docket' column
+    if "docket" not in df.columns:
+        print("Docket column missing. Attempting to load from ../clean_data_with_details.csv...")
+        meta_path = "../clean_data_with_details.csv"
+        if os.path.exists(meta_path):
+            try:
+                meta_df = pd.read_csv(meta_path)
+                if "name" in meta_df.columns and "docket" in meta_df.columns:
+                    name_to_docket = meta_df.set_index("name")["docket"].to_dict()
+                    df["docket"] = df["name"].map(name_to_docket)
+                    print("Populated 'docket' column from metadata.")
+            except Exception as e:
+                print(f"Warning: Could not populate dockets: {e}")
+        else:
+            print(f"Warning: Metadata file not found at {meta_path}")
     
     # Ensure we have a claim column
     if "claim" not in df.columns:

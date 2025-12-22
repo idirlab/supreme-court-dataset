@@ -135,6 +135,7 @@ CSCI_544_Project_Report/
 prompt_engineering.py
 find_sc_matches.py
 similarity_report.csv
+similarity_report_filtered.csv
 /*.csv
 
 !similarity_report_80B.csv

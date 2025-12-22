@@ -140,6 +140,7 @@ similarity_report.csv
 !similarity_report_80B.csv
 !claims_raw.csv
 !factual_claims.csv
+!filtered_claims.csv
 
 # Ignore failed results directories
 failed/

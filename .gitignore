@@ -136,6 +136,8 @@ prompt_engineering.py
 find_sc_matches.py
 similarity_report.csv
 similarity_report_filtered.csv
+overlap_diff_case.csv
+contradiction_diff_case.csv
 /*.csv
 
 !similarity_report_80B.csv

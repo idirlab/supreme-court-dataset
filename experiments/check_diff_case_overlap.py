@@ -34,6 +34,9 @@ Legal Question: {api_question2}
 Conclusion: {api_conclusion2}
 """
 
+def create_openai_message(prompt):
+    return {"body": {"messages": [{"role": "user", "content": prompt}]}}
+
 def extract_json(text):
     try:
         match = re.search(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
@@ -105,6 +108,7 @@ def generate_prompts(pairs_file, metadata_file, output_file, score_range=None):
 
     print("Generating prompts...")
     df_with_facts['prompt'] = df_with_facts.apply(lambda row: PROMPT_TEMPLATE.format(**row), axis=1)
+    df_with_facts['body'] = df_with_facts['prompt'].apply(lambda x: create_openai_message(x)['body'])
     
     print(f"Writing {len(df_with_facts)} records to {output_file}...")
     df_with_facts.to_json(output_file, orient='records', lines=True)
@@ -157,7 +161,7 @@ if __name__ == "__main__":
     gen_parser.add_argument("--pairs-file", required=True, help="CSV file containing claim pairs (e.g., similarity_report.csv)")
     gen_parser.add_argument("--metadata-file", default="../clean_data_with_details.csv", help="CSV file with case metadata")
     gen_parser.add_argument("--output-file", required=True, help="Output JSONL file for LLM inference")
-    gen_parser.add_argument("--range", nargs=2, type=float, default=[0.8047, 0.9688], help="Score range to filter pairs (min max)")
+    gen_parser.add_argument("--range", nargs=2, type=float, default=[0.8047, 1], help="Score range to filter pairs (min max)")
 
     proc_parser = subparsers.add_parser("process")
     proc_parser.add_argument("--input-file", required=True, help="The JSONL file generated in the generate step (used for metadata)")

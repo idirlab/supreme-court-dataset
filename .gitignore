@@ -144,6 +144,7 @@ contradiction_diff_case.csv
 !claims_raw.csv
 !factual_claims.csv
 !filtered_claims.csv
+!diff_case_claims_updated.csv
 
 # Ignore failed results directories
 failed/

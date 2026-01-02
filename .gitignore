@@ -146,6 +146,9 @@ contradiction_diff_case.csv
 !filtered_claims.csv
 !diff_case_claims_updated.csv
 !diff_case_claims_with_negatives.csv
+!final_dataset.csv
+!test_set.csv
+!supreme_court_cases.csv
 
 # Ignore failed results directories
 failed/

@@ -1,59 +1,32 @@
+#!/usr/bin/env python3
 """
-Evaluation script for legal claim + case prediction tasks.
+eval_legal_citations_ratk_main.py
 
-Main metric (default):
- - For each claim compute case-level precision/recall/F1 between predicted_cases and gold case_name.
- - If F1 >= threshold (default 0.8) the sample "graduates".
- - If graduated AND predicted_verdict == gold verdict, mark as correct.
- - Overall metric: accuracy = (# correct) / (# evaluated samples)
+Evaluation script implementing the agreed "R@K filter then (case_F1 * verdict_correct)" main metric,
+plus other metrics (exact match, F1-threshold gate, P@K/R@K, micro case precision/recall/F1).
 
-Other metrics implemented:
- - exact_case_match_metric: requires predicted case set == gold case set (optionally require overruling presence)
- - verdict_accuracy_only: label-only accuracy
- - cases_precision_recall_f1: micro precision/recall/F1 across all predictions, and mean per-sample F1
+Usage example:
+ python eval_legal_citations_ratk_main.py --gold test_set.csv --pred preds.csv \
+    --pred_cases_col predicted_cases --pred_label_col predicted_verdict \
+    --k 5 --rk_threshold 0.5
 
-Outputs:
- - Printed summary
- - Per-sample CSV: eval_results.csv
-
-Assumptions / Notes:
- - Gold CSV should be in the format you provided: columns include at least:
-     - claim
-     - case_name (a JSON list-like string or other list format)
-     - overruling_case (optional; only used if enforce_overruling flags are enabled)
-     - label (gold verdict string)
- - Predictions CSV should include:
-     - claim (to match to gold)
-     - predicted_cases (string; robust parsing supported)
-     - predicted_verdict
- - Matching between gold and predicted cases uses a lightweight normalization to reduce surface-form mismatches.
+Default behavior:
+ - Main metric: R@K filter (default K=5, rk_threshold=0.5). If passed, per-sample score = case_F1 * verdict_correct (0 or 1).
+ - Dataset main metric = mean per-sample score.
 """
 
 from __future__ import annotations
 import argparse
 import ast
-import csv
 import json
-import math
-import os
 import re
 from typing import List, Set, Tuple, Dict, Optional
 
 import pandas as pd
 
-# ---------- Utilities: parsing & normalization ----------
+# ---------- Parsing & Normalization ----------
 
 def parse_case_list(raw) -> List[str]:
-    """
-    Best-effort parse a predicted or gold 'cases' field.
-    Accepts:
-      - JSON array strings: '["A v. B", "C v. D"]'
-      - Python list literals: "['A v. B', 'C v. D']"
-      - Semicolon- or pipe-separated strings: "A v. B; C v. D" or "A v. B | C v. D"
-      - Comma-separated if no JSON-like structure (fallback)
-      - If already a list, returns it
-      - None or empty -> []
-    """
     if raw is None:
         return []
     if isinstance(raw, list):
@@ -76,56 +49,31 @@ def parse_case_list(raw) -> List[str]:
     except Exception:
         pass
     # Split by common separators
-    # Prefer semicolon or pipe as safe separators; comma is ambiguous inside names but use as last resort
     if ";" in s:
-        parts = [p.strip() for p in s.split(";") if p.strip() != ""]
-        return parts
+        return [p.strip() for p in s.split(";") if p.strip() != ""]
     if "|" in s:
-        parts = [p.strip() for p in s.split("|") if p.strip() != ""]
-        return parts
-    # If the string contains '","' sequence (raw JSON-ish without outer []), try splitting on '","'
+        return [p.strip() for p in s.split("|") if p.strip() != ""]
     if '","' in s:
-        parts = [p.strip().strip('"').strip("'") for p in s.split('","') if p.strip() != ""]
-        return parts
-    # fallback: split on comma but be conservative
+        return [p.strip().strip('"').strip("'") for p in s.split('","') if p.strip() != ""]
     if "," in s:
-        parts = [p.strip().strip('"').strip("'") for p in s.split(",") if p.strip() != ""]
-        # If parts look like single long names incorrectly split, try to detect (heuristic) - but we keep simple.
-        return parts
-    # Single case name
+        return [p.strip().strip('"').strip("'") for p in s.split(",") if p.strip() != ""]
     return [s]
 
 def normalize_case_name(name: str) -> str:
-    """
-    Normalize case names to reduce superficial mismatches:
-    - lowercases
-    - strips leading/trailing whitespace
-    - removes punctuation except letters, numbers, spaces and the letter 'v' which often appears in 'v.' or 'vs'
-    - collapses multiple spaces
-    This is conservative: it's intended to reduce formatting mismatches but not to conflate distinct cases.
-    """
     if name is None:
         return ""
     s = str(name).lower().strip()
-    # replace common variants of 'v.' and 'vs.' to 'v'
-    s = re.sub(r'\bvs?\.?(\s+|$)', ' v ', s)
-    # remove punctuation except alphanumerics, spaces and 'v'
+    s = re.sub(r'\bvs?\.?(\s+|$)', ' v ', s)  # normalize vs./v.
     s = re.sub(r'[^0-9a-z v]', ' ', s)
-    # collapse whitespace
     s = re.sub(r'\s+', ' ', s).strip()
     return s
 
 def list_to_norm_set(lst: List[str]) -> Set[str]:
     return {normalize_case_name(x) for x in lst if x is not None and str(x).strip() != ""}
 
-# ---------- Core metrics ----------
+# ---------- Basic set metrics ----------
 
 def precision_recall_f1_for_sets(pred_set: Set[str], gold_set: Set[str]) -> Tuple[float, float, float, int]:
-    """
-    Return (precision, recall, f1, tp_count) for the two sets.
-    If both sets are empty: define precision=recall=f1=1.0 (perfect match).
-    If pred empty and gold nonempty: precision=0.0, recall=0.0, f1=0.0.
-    """
     if not gold_set and not pred_set:
         return 1.0, 1.0, 1.0, 0
     tp = len(pred_set.intersection(gold_set))
@@ -134,47 +82,124 @@ def precision_recall_f1_for_sets(pred_set: Set[str], gold_set: Set[str]) -> Tupl
     f1 = (2 * prec * rec / (prec + rec)) if (prec + rec) > 0 else 0.0
     return prec, rec, f1, tp
 
-# ---------- Evaluator functions ----------
+# ---------- P@K and R@K helpers ----------
 
-def main_metric_f1_threshold(
+def prec_at_k(pred_list: List[str], gold_set: Set[str], k: int) -> float:
+    if k <= 0:
+        return 0.0
+    if (not gold_set) and (not pred_list):
+        return 1.0
+    topk = pred_list[:k]
+    topk_norm = [normalize_case_name(x) for x in topk]
+    tp = sum(1 for x in topk_norm if x in gold_set)
+    denom = min(k, len(pred_list)) if len(pred_list) > 0 else k
+    return tp / denom if denom > 0 else 0.0
+
+def rec_at_k(pred_list: List[str], gold_set: Set[str], k: int) -> float:
+    if k <= 0:
+        return 0.0
+    if not gold_set:
+        return 1.0
+    topk = pred_list[:k]
+    topk_norm = [normalize_case_name(x) for x in topk]
+    tp = sum(1 for x in topk_norm if x in gold_set)
+    return tp / len(gold_set)
+
+# ---------- Main new metric: R@K filter then case_F1 * verdict_correct ----------
+
+def main_metric_ratk_filter_mul(
     pred_cases: List[str],
     pred_label: str,
     gold_cases: List[str],
     gold_label: str,
     gold_overruling_case: Optional[str] = None,
-    threshold: float = 0.8,
+    k: int = 5,
+    rk_threshold: float = 0.5,
     enforce_overruling_for_overruled: bool = True
 ) -> Dict:
     """
-    Implements your requested main metric:
-      - compute case F1 between predicted and gold sets
-      - 'graduate' if F1 >= threshold
-      - OPTIONAL: if gold_label == 'Overruled' and enforce_overruling_for_overruled True,
-                  require normalized overruling_case be present in predictions to graduate
-      - if graduated AND pred_label == gold_label => correct
-    Returns a dict with fields:
-      - precision, recall, f1, tp_count
-      - graduated (bool)
-      - correct (bool)
+    Main metric:
+      - compute R@K
+      - graduation if R@K >= rk_threshold, and (if Overruled) overruling_case present (configurable)
+      - if graduated: sample_score = case_F1 * verdict_correct (verdict_correct in {0,1})
+      - else: sample_score = 0
+    Returns details for reporting.
     """
     pset = list_to_norm_set(pred_cases)
     gset = list_to_norm_set(gold_cases)
     prec, rec, f1, tp = precision_recall_f1_for_sets(pset, gset)
+    r_at_k = rec_at_k(pred_cases, gset, k)
+    p_at_k = prec_at_k(pred_cases, gset, k)
 
-    graduated = f1 >= threshold
-    # check overruling presence if required
-    if gold_label and gold_label.lower() == "overruled" and enforce_overruling_for_overruled:
+    # Graduation by R@K
+    graduated = r_at_k >= rk_threshold
+
+    # enforce overruling presence when configured
+    if gold_label and str(gold_label).strip().lower() == "overruled" and enforce_overruling_for_overruled:
+        if gold_overruling_case:
+            norm_o = normalize_case_name(gold_overruling_case)
+            if norm_o not in pset:
+                graduated = False
+
+    verdict_correct = 1 if str(pred_label).strip().lower() == str(gold_label).strip().lower() else 0
+
+    sample_score = f1 * verdict_correct if graduated else 0.0
+
+    return {
+        "precision_full": prec,
+        "recall_full": rec,
+        "f1_full": f1,
+        "tp_count": tp,
+        "p_at_k": p_at_k,
+        "r_at_k": r_at_k,
+        "graduated": graduated,
+        "verdict_correct": bool(verdict_correct),
+        "sample_score": sample_score
+    }
+
+# ---------- Existing metrics (exact match, F1-threshold & flexible metric) ----------
+
+def main_metric_with_thresholds(
+    pred_cases: List[str],
+    pred_label: str,
+    gold_cases: List[str],
+    gold_label: str,
+    gold_overruling_case: Optional[str] = None,
+    f1_threshold: Optional[float] = 0.8,
+    pk_threshold: Optional[float] = None,
+    rk_threshold: Optional[float] = None,
+    k: int = 5,
+    enforce_overruling_for_overruled: bool = True
+) -> Dict:
+    pset = list_to_norm_set(pred_cases)
+    gset = list_to_norm_set(gold_cases)
+    prec, rec, f1, tp = precision_recall_f1_for_sets(pset, gset)
+    p_at_k = prec_at_k(pred_cases, gset, k)
+    r_at_k = rec_at_k(pred_cases, gset, k)
+
+    graduated = False
+    if f1_threshold is not None and f1 >= f1_threshold:
+        graduated = True
+    if (pk_threshold is not None) and p_at_k >= pk_threshold:
+        graduated = True
+    if (rk_threshold is not None) and r_at_k >= rk_threshold:
+        graduated = True
+
+    if gold_label and str(gold_label).strip().lower() == "overruled" and enforce_overruling_for_overruled:
         if gold_overruling_case:
             norm_o = normalize_case_name(gold_overruling_case)
             if norm_o not in pset:
                 graduated = False
 
     correct = graduated and str(pred_label).strip().lower() == str(gold_label).strip().lower()
+
     return {
         "precision": prec,
         "recall": rec,
         "f1": f1,
         "tp_count": tp,
+        "p_at_k": p_at_k,
+        "r_at_k": r_at_k,
         "graduated": graduated,
         "correct": correct
     }
@@ -187,14 +212,10 @@ def exact_case_match_metric(
     gold_overruling_case: Optional[str] = None,
     require_overruling_in_exact: bool = True
 ) -> Dict:
-    """
-    Exact-match variant: the gate requires predicted case set EXACTLY equals gold case set (no more, no less).
-    For Overruled gold labels we optionally require that the gold_overruling_case be included in the predicted set.
-    """
     pset = list_to_norm_set(pred_cases)
     gset = list_to_norm_set(gold_cases)
     exact_match = (pset == gset)
-    if gold_label and gold_label.lower() == "overruled" and require_overruling_in_exact:
+    if gold_label and str(gold_label).strip().lower() == "overruled" and require_overruling_in_exact:
         if gold_overruling_case:
             norm_o = normalize_case_name(gold_overruling_case)
             if norm_o not in pset:
@@ -210,18 +231,19 @@ def exact_case_match_metric(
 def verdict_accuracy_only(pred_label: str, gold_label: str) -> bool:
     return str(pred_label).strip().lower() == str(gold_label).strip().lower()
 
-def cases_precision_recall_f1(
+# ---------- Aggregated cases metrics (with P@K/R@K) ----------
+
+def cases_precision_recall_f1_with_pk_rk(
     all_pred_cases_lists: List[List[str]],
-    all_gold_cases_lists: List[List[str]]
+    all_gold_cases_lists: List[List[str]],
+    k: int = 5
 ) -> Dict:
-    """
-    Compute micro-averaged precision/recall/f1 across all items (sum TP / sum Pred / sum Gold),
-    and return mean per-sample F1 as well (macro-like mean of per-sample F1).
-    """
     total_tp = 0
     total_pred = 0
     total_gold = 0
     f1s = []
+    p_at_ks = []
+    r_at_ks = []
     for pred, gold in zip(all_pred_cases_lists, all_gold_cases_lists):
         pset = list_to_norm_set(pred)
         gset = list_to_norm_set(gold)
@@ -230,21 +252,48 @@ def cases_precision_recall_f1(
         total_pred += len(pset)
         total_gold += len(gset)
         f1s.append(f1)
+        p_at_ks.append(prec_at_k(pred, gset, k))
+        r_at_ks.append(rec_at_k(pred, gset, k))
+
     micro_prec = total_tp / total_pred if total_pred > 0 else 0.0
     micro_rec = total_tp / total_gold if total_gold > 0 else 0.0
     micro_f1 = (2 * micro_prec * micro_rec / (micro_prec + micro_rec)) if (micro_prec + micro_rec) > 0 else 0.0
     mean_per_sample_f1 = sum(f1s) / len(f1s) if f1s else 0.0
+    mean_p_at_k = sum(p_at_ks) / len(p_at_ks) if p_at_ks else 0.0
+    mean_r_at_k = sum(r_at_ks) / len(r_at_ks) if r_at_ks else 0.0
+
+    total_tp_at_k = 0
+    total_denom_for_pk = 0
+    total_gold_for_rk = 0
+    for pred, gold in zip(all_pred_cases_lists, all_gold_cases_lists):
+        topk = pred[:k]
+        topk_norm = [normalize_case_name(x) for x in topk]
+        gset = list_to_norm_set(gold)
+        tp_k = sum(1 for x in topk_norm if x in gset)
+        total_tp_at_k += tp_k
+        denom_pk = min(k, len(pred)) if len(pred) > 0 else k
+        total_denom_for_pk += denom_pk
+        total_gold_for_rk += len(gset)
+
+    micro_p_at_k = total_tp_at_k / total_denom_for_pk if total_denom_for_pk > 0 else 0.0
+    micro_r_at_k = total_tp_at_k / total_gold_for_rk if total_gold_for_rk > 0 else 0.0
+
     return {
         "micro_precision": micro_prec,
         "micro_recall": micro_rec,
         "micro_f1": micro_f1,
         "mean_per_sample_f1": mean_per_sample_f1,
+        "mean_p_at_k": mean_p_at_k,
+        "mean_r_at_k": mean_r_at_k,
+        "micro_p_at_k": micro_p_at_k,
+        "micro_r_at_k": micro_r_at_k,
         "total_tp": total_tp,
+        "total_tp_at_k": total_tp_at_k,
         "total_pred": total_pred,
         "total_gold": total_gold
     }
 
-# ---------- Orchestration: process CSVs and compute metrics ----------
+# ---------- File orchestration ----------
 
 def evaluate_files(
     gold_path: str,
@@ -255,54 +304,62 @@ def evaluate_files(
     gold_overrule_col: str = "overruling_case",
     pred_cases_col: str = "predicted_cases",
     pred_label_col: str = "predicted_verdict",
-    f1_threshold: float = 0.8,
+    # defaults for various thresholds
+    main_k: int = 5,
+    main_rk_threshold: float = 0.5,
+    f1_threshold: Optional[float] = 0.8,
+    pk_threshold: Optional[float] = None,
+    rk_threshold: Optional[float] = None,  # additional flexible thresholds if used
     enforce_overruling_for_overruled: bool = True,
     require_overruling_in_exact: bool = True,
     output_path: str = "eval_results.csv"
 ) -> Dict:
-    # Load CSVs
     gold = pd.read_csv(gold_path)
     preds = pd.read_csv(pred_path)
 
-    # Merge by claim (exact match)
     merged = gold.merge(preds, on=claim_key, how='left', suffixes=('_gold', '_pred'))
-    # rows without prediction produce NaNs; we'll treat predicted as empty lists
-    # Parse case lists and normalize into lists
+
     parsed_pred_cases = []
     parsed_gold_cases = []
     gold_overruling = []
     pred_labels = []
     gold_labels = []
-    claims = []
     per_sample_results = []
 
     for idx, row in merged.iterrows():
         claim_text = row.get(claim_key, "")
-        claims.append(claim_text)
-        # gold
         raw_gold_cases = row.get(gold_cases_col, "")
         gold_cases_list = parse_case_list(raw_gold_cases)
-        parsed_gold_cases.append(gold_cases_list)
-        gold_label = row.get(gold_label_col, "")
-        gold_labels.append(gold_label)
         raw_overrule = row.get(gold_overrule_col, None) if gold_overrule_col in row.index else None
-        gold_overruling.append(raw_overrule)
+        gold_label = row.get(gold_label_col, "")
 
-        # preds (may be NaN)
         raw_pred_cases = row.get(pred_cases_col, "")
         if pd.isna(raw_pred_cases):
             pred_cases_list = []
         else:
             pred_cases_list = parse_case_list(raw_pred_cases)
-        parsed_pred_cases.append(pred_cases_list)
         pred_label = row.get(pred_label_col, "") if pred_label_col in row.index else ""
-        pred_labels.append(pred_label)
 
-        # compute per-sample metrics
-        main_res = main_metric_f1_threshold(
+        parsed_gold_cases.append(gold_cases_list)
+        parsed_pred_cases.append(pred_cases_list)
+
+        # --- main (new) metric ---
+        main_ratk = main_metric_ratk_filter_mul(
             pred_cases_list, pred_label, gold_cases_list, gold_label,
             gold_overruling_case=raw_overrule,
-            threshold=f1_threshold,
+            k=main_k,
+            rk_threshold=main_rk_threshold,
+            enforce_overruling_for_overruled=enforce_overruling_for_overruled
+        )
+
+        # --- other metrics for reporting ---
+        flexible = main_metric_with_thresholds(
+            pred_cases_list, pred_label, gold_cases_list, gold_label,
+            gold_overruling_case=raw_overrule,
+            f1_threshold=f1_threshold,
+            pk_threshold=pk_threshold,
+            rk_threshold=rk_threshold,
+            k=main_k,
             enforce_overruling_for_overruled=enforce_overruling_for_overruled
         )
         exact_res = exact_case_match_metric(
@@ -311,6 +368,7 @@ def evaluate_files(
             require_overruling_in_exact=require_overruling_in_exact
         )
         verdict_only = verdict_accuracy_only(pred_label, gold_label)
+
         per_sample_results.append({
             "claim": claim_text,
             "predicted_cases_raw": raw_pred_cases,
@@ -319,49 +377,75 @@ def evaluate_files(
             "predicted_verdict": pred_label,
             "gold_verdict": gold_label,
             "gold_overruling_case": raw_overrule,
-            "main_prec": main_res["precision"],
-            "main_rec": main_res["recall"],
-            "main_f1": main_res["f1"],
-            "main_graduated": main_res["graduated"],
-            "main_correct": main_res["correct"],
+            # main ratk metric fields
+            "main_ratk_p_at_k": main_ratk["p_at_k"],
+            "main_ratk_r_at_k": main_ratk["r_at_k"],
+            "main_ratk_f1_full": main_ratk["f1_full"],
+            "main_ratk_graduated": main_ratk["graduated"],
+            "main_ratk_verdict_correct": main_ratk["verdict_correct"],
+            "main_ratk_sample_score": main_ratk["sample_score"],
+            # flexible metric fields
+            "flex_prec": flexible["precision"],
+            "flex_rec": flexible["recall"],
+            "flex_f1": flexible["f1"],
+            "flex_graduated": flexible["graduated"],
+            "flex_correct": flexible["correct"],
+            # exact metrics
             "exact_match": exact_res["exact_match"],
             "exact_correct": exact_res["correct"],
             "verdict_only_correct": verdict_only
         })
 
-    # compute dataset-level aggregations
-    # main metric accuracy:
+    # Aggregations
     n_total = len(per_sample_results)
-    n_main_correct = sum(1 for r in per_sample_results if r["main_correct"])
-    main_accuracy = n_main_correct / n_total if n_total > 0 else 0.0
+    mean_main_ratk_score = sum(r["main_ratk_sample_score"] for r in per_sample_results) / n_total if n_total > 0 else 0.0
 
-    # exact-case metric accuracy:
+    # Bin-count: how many samples graduated by the R@K filter (for inspection)
+    n_main_ratk_graduated = sum(1 for r in per_sample_results if r["main_ratk_graduated"])
+    frac_main_ratk_graduated = n_main_ratk_graduated / n_total if n_total > 0 else 0.0
+
+    # other metrics (flexible, exact, verdict-only)
+    n_flex_correct = sum(1 for r in per_sample_results if r["flex_correct"])
+    flex_accuracy = n_flex_correct / n_total if n_total > 0 else 0.0
+
     n_exact_correct = sum(1 for r in per_sample_results if r["exact_correct"])
     exact_accuracy = n_exact_correct / n_total if n_total > 0 else 0.0
 
-    # verdict-only accuracy:
     n_verdict_correct = sum(1 for r in per_sample_results if r["verdict_only_correct"])
     verdict_accuracy = n_verdict_correct / n_total if n_total > 0 else 0.0
 
-    # cases micro precision/recall/f1 and mean per-sample f1:
-    cases_stats = cases_precision_recall_f1(parsed_pred_cases, parsed_gold_cases)
+    cases_stats = cases_precision_recall_f1_with_pk_rk(parsed_pred_cases, parsed_gold_cases, k=main_k)
 
-    # build data frame and save
     out_df = pd.DataFrame(per_sample_results)
     out_df.to_csv(output_path, index=False)
 
     summary = {
         "n_samples": n_total,
-        "main_accuracy_f1_threshold": main_accuracy,
+        # MAIN metric (R@K filter then case_F1 * verdict)
+        "main_metric_name": "R@K-filter × (case_F1 × verdict_correct)",
+        "main_k": main_k,
+        "k": main_k,
+        "main_rk_threshold": main_rk_threshold,
+        "main_mean_score": mean_main_ratk_score,
+        "main_frac_graduated": frac_main_ratk_graduated,
+        # flexible metric (legacy)
+        "flexible_metric_accuracy": flex_accuracy,
         "f1_threshold": f1_threshold,
-        "enforce_overruling_for_overruled": enforce_overruling_for_overruled,
+        "pk_threshold": pk_threshold,
+        "rk_threshold": rk_threshold,
+        # exact-match
         "exact_accuracy": exact_accuracy,
-        "require_overruling_in_exact": require_overruling_in_exact,
+        # verdict-only
         "verdict_only_accuracy": verdict_accuracy,
+        # cases micro stats
         "cases_micro_precision": cases_stats["micro_precision"],
         "cases_micro_recall": cases_stats["micro_recall"],
         "cases_micro_f1": cases_stats["micro_f1"],
         "cases_mean_per_sample_f1": cases_stats["mean_per_sample_f1"],
+        "cases_mean_p_at_k": cases_stats["mean_p_at_k"],
+        "cases_mean_r_at_k": cases_stats["mean_r_at_k"],
+        "cases_micro_p_at_k": cases_stats["micro_p_at_k"],
+        "cases_micro_r_at_k": cases_stats["micro_r_at_k"],
         "per_sample_output": output_path
     }
 
@@ -370,7 +454,7 @@ def evaluate_files(
 # ---------- CLI ----------
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Evaluate legal citation + verdict predictions.")
+    parser = argparse.ArgumentParser(description="Evaluate legal citation + verdict predictions with R@K-filter main metric.")
     parser.add_argument("--gold", default="test_set.csv", help="Gold test set CSV (e.g., test_set.csv)")
     parser.add_argument("--pred", required=True, help="Predictions CSV")
     parser.add_argument("--claim_col", default="claim", help="Column name for claim text (used to join files)")
@@ -379,7 +463,11 @@ def parse_args():
     parser.add_argument("--gold_overrule_col", default="overruling_case", help="Gold column with overruling case (optional)")
     parser.add_argument("--pred_cases_col", default="predicted_cases", help="Predictions column with predicted cases")
     parser.add_argument("--pred_label_col", default="predicted_verdict", help="Predictions column with predicted verdict")
-    parser.add_argument("--threshold", type=float, default=0.8, help="F1 threshold for main metric graduation (default 0.8)")
+    parser.add_argument("--k", type=int, default=5, help="K for P@K / R@K (default 5)")
+    parser.add_argument("--rk_threshold", type=float, default=0.75, help="R@K threshold used as the graduation filter for the main metric (default 0.5)")
+    parser.add_argument("--threshold", type=float, default=0.8, help="F1 threshold for flexible metric graduation (default 0.8)")
+    parser.add_argument("--pk_threshold", type=float, default=None, help="Precision@K threshold for flexible graduation (optional)")
+    parser.add_argument("--rk_threshold_flex", type=float, default=None, help="Recall@K threshold for flexible graduation (optional; separate from main R@K filter)")
     parser.add_argument("--no_enforce_overruling", action="store_true", help="Do not require overruling case presence for Overruled gold labels in main metric")
     parser.add_argument("--no_require_overruling_in_exact", action="store_true", help="Do not require overruling case presence for Overruled gold labels in exact-match metric")
     parser.add_argument("--out", default="eval_results.csv", help="Per-sample CSV output path")
@@ -396,20 +484,36 @@ def main():
         gold_overrule_col=args.gold_overrule_col,
         pred_cases_col=args.pred_cases_col,
         pred_label_col=args.pred_label_col,
+        main_k=args.k,
+        main_rk_threshold=args.rk_threshold,
         f1_threshold=args.threshold,
+        pk_threshold=args.pk_threshold,
+        rk_threshold=args.rk_threshold_flex,
         enforce_overruling_for_overruled=not args.no_enforce_overruling,
         require_overruling_in_exact=not args.no_require_overruling_in_exact,
         output_path=args.out
     )
-    summary = res["summary"]
+    s = res["summary"]
     print("=== Evaluation Summary ===")
-    print(f"Samples: {summary['n_samples']}")
-    print(f"Main metric (F1 threshold {summary['f1_threshold']}): accuracy = {summary['main_accuracy_f1_threshold']:.4f}")
-    print(f"Exact-match (cases sets identical): accuracy = {summary['exact_accuracy']:.4f}")
-    print(f"Verdict-only accuracy: {summary['verdict_only_accuracy']:.4f}")
-    print(f"Cases micro precision / recall / f1 = {summary['cases_micro_precision']:.4f} / {summary['cases_micro_recall']:.4f} / {summary['cases_micro_f1']:.4f}")
-    print(f"Mean per-sample case F1 = {summary['cases_mean_per_sample_f1']:.4f}")
-    print(f"Per-sample results written to: {summary['per_sample_output']}")
+    print(f"Samples: {s['n_samples']}")
+    print("MAIN METRIC (printed first):")
+    print(f"  Name: {s['main_metric_name']}")
+    print(f"  K = {s['main_k']}, R@K threshold = {s['main_rk_threshold']}")
+    print(f"  Mean per-sample main score = {s['main_mean_score']:.4f}   (range 0..1)")
+    print(f"  Fraction of samples that graduated R@K filter = {s['main_frac_graduated']:.4f}")
+    print("")
+    print("Other metrics:")
+    print(f"  Flexible (F1/P@K/R@K) metric accuracy = {s['flexible_metric_accuracy']:.4f}")
+    print(f"  Exact-match (cases sets identical) accuracy = {s['exact_accuracy']:.4f}")
+    print(f"  Verdict-only accuracy = {s['verdict_only_accuracy']:.4f}")
+    print("  Cases (micro P / R / F1) = "
+          f"{s['cases_micro_precision']:.4f} / {s['cases_micro_recall']:.4f} / {s['cases_micro_f1']:.4f}")
+    print(f"  Mean per-sample case F1 = {s['cases_mean_per_sample_f1']:.4f}")
+    print(f"  Mean per-sample P@{s['k']} = {s['cases_mean_p_at_k']:.4f}")
+    print(f"  Mean per-sample R@{s['k']} = {s['cases_mean_r_at_k']:.4f}")
+    print(f"  Micro P@{s['k']} = {s['cases_micro_p_at_k']:.4f}")
+    print(f"  Micro R@{s['k']} = {s['cases_micro_r_at_k']:.4f}")
+    print(f"Per-sample results written to: {s['per_sample_output']}")
     print("==========================")
 
 if __name__ == "__main__":

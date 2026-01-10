@@ -149,6 +149,8 @@ contradiction_diff_case.csv
 !final_dataset.csv
 !test_set.csv
 !supreme_court_cases.csv
+store/
+claimcheck/
 
 # Ignore failed results directories
 failed/

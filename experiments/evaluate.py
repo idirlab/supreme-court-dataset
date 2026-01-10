@@ -1,11 +1,26 @@
 import pandas as pd
 import argparse
 import numpy as np
+import json
+import ast
 
 parser = argparse.ArgumentParser()
-parser.add_argument("ground_truth", help="Path to the ground truth file")
-parser.add_argument("predictions", help="Path to the predictions file")
+parser.add_argument("--ground_truth", help="Path to the ground truth file")
+parser.add_argument("--predictions", help="Path to the predictions file")
 args = parser.parse_args()
+
+def parse_list(x):
+    if isinstance(x, list):
+        return x
+    if isinstance(x, str):
+        try:
+            return json.loads(x)
+        except:
+            try:
+                return ast.literal_eval(x)
+            except:
+                return [x]
+    return []
 
 def recall_at_k(pred_list, gold_list, k):
     if not pred_list:
@@ -33,7 +48,13 @@ def evidence_score(pred_list, gold_list, k=5, r_at_k_threshold=0.5):
     return case_f1_score(pred_list, gold_list)
 
 def main():
-    ground_truth = pd.read_json(args.ground_truth, lines=True)
+    if args.ground_truth.endswith('.csv'):
+        ground_truth = pd.read_csv(args.ground_truth)
+        if 'case_name' in ground_truth.columns and 'case_names' not in ground_truth.columns:
+            ground_truth['case_names'] = ground_truth['case_name'].apply(parse_list)
+    else:
+        ground_truth = pd.read_json(args.ground_truth, lines=True)
+        
     predictions = pd.read_json(args.predictions, lines=True)
 
     predictions = ground_truth.merge(predictions, on="claim", how="left")
@@ -46,7 +67,7 @@ def main():
 
     predictions['evidence_score'] = predictions.apply(lambda row: evidence_score(row['predicted_cases'], row['case_names'], k=5), axis=1)
 
-    predictions['verdict_accuracy'] = (predictions['predicted_verdict'] == predictions['verdict']).astype(float)
+    predictions['verdict_accuracy'] = (predictions['predicted_verdict'] == predictions['class']).astype(float)
 
     predictions['verdict_score'] = predictions['evidence_score'] * predictions['verdict_accuracy']
 

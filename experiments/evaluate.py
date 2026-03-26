@@ -4,10 +4,11 @@ import numpy as np
 import json
 import ast
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--ground_truth", help="Path to the ground truth file")
-parser.add_argument("--predictions", help="Path to the predictions file")
-args = parser.parse_args()
+def _parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--ground_truth", help="Path to the ground truth file")
+    parser.add_argument("--predictions", help="Path to the predictions file")
+    return parser.parse_args()
 
 def parse_list(x):
     if isinstance(x, list):
@@ -48,6 +49,7 @@ def evidence_score(pred_list, gold_list, k=5, r_at_k_threshold=0.5):
     return case_f1_score(pred_list, gold_list)
 
 def main():
+    args = _parse_args()
     if args.ground_truth.endswith('.csv'):
         ground_truth = pd.read_csv(args.ground_truth)
         if 'case_name' in ground_truth.columns and 'case_names' not in ground_truth.columns:

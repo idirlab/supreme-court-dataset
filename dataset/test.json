@@ -1,0 +1,4242 @@
+[
+  {
+    "claim": "American constitutional expression rights are not applicable to entities formed in non-domestic jurisdictions.",
+    "case_name": [
+      "United States Agency for International Development v. Alliance for Open Society International, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A charge-resolution statement accepting criminal liability remains legally operative absent judicial affirmation regarding procedural right comprehension and free will.",
+    "case_name": [
+      "Boykin v. Alabama"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The death penalty cannot be used for crimes that do not result in death.",
+    "case_name": [
+      "Coker v. Georgia",
+      "Herrera v. Collins"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Unauthorized government inspections of private assets yield evidence that cannot be used in court proceedings.",
+    "case_name": [
+      "Brown v. Illinois",
+      "Kaupp v. Texas",
+      "New York v. Harris"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Before incarcerating individuals for disobeying judicial directives, payment capacity review is unnecessary.",
+    "case_name": [
+      "Turner v. Rogers"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "United States law does not require that the proceeds from an enforced real estate disposition must be identical to the item's current valuation for legal effect.",
+    "case_name": [
+      "BFP v. Resolution Trust Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Address changes must be reported by individuals with prior lewd convictions only if they are currently within U.S. territory.",
+    "case_name": [
+      "Nichols v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Constitutional safeguards against arbitrary deprivation of life are violated when government agents track an individual attempting to evade apprehension and their intentional or reckless conduct results in fatality.",
+    "case_name": [
+      "County of Sacramento v. Lewis",
+      "Lange v. California"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Roadblocks established to check for driver impairment are unconstitutional as an unreasonable search and seizure.",
+    "case_name": [
+      "Michigan Department of State Police v. Sitz"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Congress can pass laws to give judges in certain courts jobs for life and pay that can't be reduced.",
+    "case_name": [
+      "Glidden Company v. Zdanok"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Geographic restrictions between competitors are illegal even if the companies have a good reason for them.",
+    "case_name": [
+      "United States v. Sealy, Inc."
+    ],
+    "overruling_case": "Continental T. V., Inc. v. GTE Sylvania Inc.",
+    "label": "Overruled"
+  },
+  {
+    "claim": "The Constitution requires states to admit all evidence offered by a criminal defendant.",
+    "case_name": [
+      "Montana v. Egelhoff"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Business entities directly covering medical care do not qualify as risk-pooling organizations under national regulations.",
+    "case_name": [
+      "FMC Corporation v. Holliday"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Automobiles and residences are afforded equal constitutional safeguards against unreasonable government intrusion.",
+    "case_name": [
+      "California v. Carney"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "American statutes permit mandatory data collection concerning the entire fiscal holdings of a different country's governing body, regardless of location.",
+    "case_name": [
+      "Argentina v. NML Capital, Ltd."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Fourth Amendment allows police to use force that may cause serious injury to a suspect when necessary to prevent harm to innocent people.",
+    "case_name": [
+      "Scott v. Harris"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The legislative branch possesses the authority to transfer conflicts regarding exclusive rights for inventions to administrative agencies rather than the judiciary.",
+    "case_name": [
+      "Oil States Energy Services LLC v. Greene’s Energy Group, LLC"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Restrictions on expressive activity near medical sites do not breach constitutional norms when alternative channels for conveying perspectives are available beyond legal boundaries.",
+    "case_name": [
+      "Hill v. Colorado"
+    ],
+    "overruling_case": "McCullen v. Coakley",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Prior to discontinuing public assistance payments, state agencies must conduct a proceeding allowing claimants to submit relevant documentation.",
+    "case_name": [
+      "Goldberg v. Kelly",
+      "Mathews v. Eldridge",
+      "Wheeler v. Montgomery"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Speech that doesn't share ideas and is only meant to insult is not protected by the First Amendment.",
+    "case_name": [
+      "Chaplinsky v. New Hampshire"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government discontinuation of federal retirement payments following expulsion does not qualify as retribution under legal statutes.",
+    "case_name": [
+      "Flemming v. Nestor"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Jurors cannot testify about their own actions during the trial to overturn a verdict.",
+    "case_name": [
+      "Tanner v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The United States judiciary has the power to review the lawfulness of holding Americans regardless of whether the armed forces operate within an international alliance.",
+    "case_name": [
+      "Munaf v. Geren"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Police must consider all available information together when deciding whether to search someone's belongings without a warrant.",
+    "case_name": [
+      "United States v. Sokolow"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Constitution requires prosecutors to disclose evidence that could impeach a witness to a defendant before entering into plea negotiations.",
+    "case_name": [
+      "United States v. Ruiz"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Even when a worker's advocate addresses workplace disputes, federal payment regulations do not require joint agreements if state law forbids employer-employee negotiations.",
+    "case_name": [
+      "Moreau v. Klevenhagen"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Works lawfully acquired in foreign jurisdictions may be resold domestically without requiring approval from exclusive rights holders",
+    "case_name": [
+      "Kirtsaeng v. John Wiley & Sons, Inc.",
+      "Quality King Distributors, Inc. v. L'Anzaresearch International, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Employers are exempt from Social Security taxes if they demonstrate a sincerely held religious belief that conflicts with participation in the program.",
+    "case_name": [
+      "United States v. Lee"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When civic engagement rules contain no legal distinctions based on group identity, affected demographics are not constitutionally eligible for special protection status.",
+    "case_name": [
+      "Hernandez v. Texas"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "U.S. legal authorities cannot shield individuals against criminal charges abroad, making the constitutional right against self-incrimination irrelevant to those risks.",
+    "case_name": [
+      "United States v. Balsys"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Property taxes on imported goods are allowed if they apply equally to all similar items in the state.",
+    "case_name": [
+      "Michelin Tire Corporation v. Wages"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Educational institutions operated by civil authorities may not incorporate spiritual recitations aligned with specific traditions at commencement rites.",
+    "case_name": [
+      "Lee v. Weisman"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Persons held in custody lack a legal entitlement to observe staff searching private accommodations.",
+    "case_name": [
+      "Block v. Rutherford"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State law governs wrongful death claims, even when they arise from activities traditionally covered by federal maritime law.",
+    "case_name": [
+      "Goett v. Union Carbide Corporation",
+      "Hess v. United States",
+      "Yamaha Motor Corporation, U.S.A. v. Calhoun"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Where state regulations and national statutes conflict concerning election-related matters, the national statutes take precedence.",
+    "case_name": [
+      "Katzenbach v. Morgan"
+    ],
+    "overruling_case": "Shelby County v. Holder",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Current judicial interpretation bars civil proceedings initiated by non-citizens against entities organized outside U.S. borders for breaches of universally recognized human dignity standards.",
+    "case_name": [
+      "Jesner v. Arab Bank, PLC"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Whether the flooding was expected as a result of government actions is considered when deciding if compensation is required.",
+    "case_name": [
+      "Arkansas Game & Fish Commission v. United States of America"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Constitutional guarantees around expression and assembly do not establish the right of individuals to witness legal proceedings regarding unlawful deeds, and exclusion from sessions is allowable while protecting legitimacy and decorum.",
+    "case_name": [
+      "Gannett Company, Inc. v. DePasquale",
+      "Richmond Newspapers Inc. v. Virginia"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Using a drug-sniffing dog to detect drugs at a residence's front door does not require a warrant.",
+    "case_name": [
+      "Florida v. Jardines"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "State authorities can discontinue service agreements and staff roles when individuals express disagreement with regulatory actions, and these actions do not breach constitutional protections.",
+    "case_name": [
+      "Board of County Commissioners, Wabaunsee County, Kansas v. Umbehr",
+      "Perry v. Sindermann"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "No automatic payment obligation exists for brief building restrictions in property regulation.",
+    "case_name": [
+      "Tahoe-Sierra Preservation Council, Inc. v. Tahoe Regional Planning Agency"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal laws prohibiting state economic regulation are subject to constitutional challenge.",
+    "case_name": [
+      "Pacific Gas & Electric Company v. State Energy Resources Conservation and Development Commission"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Disqualification isn't required solely due to a judicial officer's identifying information appearing within a document not authored by them.",
+    "case_name": [
+      "Sao Paulo State of Federative Republic of Brazil v. American Tobacco Company, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Sixth Amendment right to counsel applies to tribal court proceedings, and a conviction obtained without providing that right is invalid for use in federal sentencing.",
+    "case_name": [
+      "United States v. Bryant"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A guilty verdict may be entered for non-capital offenses in non-federal jurisdictions if the citizen panel does not all agree.",
+    "case_name": [
+      "Apodaca v. Oregon"
+    ],
+    "overruling_case": "Ramos v. Louisiana",
+    "label": "Overruled"
+  },
+  {
+    "claim": "A non-unanimous jury verdict indicates the prosecution failed to prove guilt beyond a reasonable doubt and violates due process.",
+    "case_name": [
+      "Johnson v. Louisiana"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "For property taken without compensation, state-level judicial findings supersede any further review.",
+    "case_name": [
+      "San Remo Hotel, L.P. v. City and County of San Francisco, California"
+    ],
+    "overruling_case": "Stewart v. Smith",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Staff members of organizations contracting with publicly listed entities are shielded from disciplinary action when alerting oversight agencies about deceptive financial dealings.",
+    "case_name": [
+      "Lawson and Zang v. FMR, LLC"
+    ],
+    "overruling_case": "Digital Realty Trust, Inc. v. Somers",
+    "label": "Overruled"
+  },
+  {
+    "claim": "University enrollment decisions may account for racial characteristics solely when justified by a compelling academic purpose.",
+    "case_name": [
+      "Fisher v. University of Texas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Differential fiscal burdens applied to non-resident corporate operations compared to domestic ones violate the supreme law of the land.",
+    "case_name": [
+      "South Central Bell Telephone Company v. Alabama"
+    ],
+    "overruling_case": "Department of Revenue of Kentucky v. Davis",
+    "label": "Overruled"
+  },
+  {
+    "claim": "The plaintiff's trust in false statements transmitted through postal or digital channels need not be demonstrated when invoking federal anti-organized crime statutes.",
+    "case_name": [
+      "Bank of China v. NBM L.L.C."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Characterizing monetary values using top-tier descriptors without substantive evidence does not inevitably create false perceptions because these expressions are conventionally recognized as opinion-based.",
+    "case_name": [
+      "Virginia Bankshares, Inc.  v. Sandberg"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Governmental bodies must follow binding terms that require time off in lieu of extra earnings for workdays exceeding norms, regardless of whether state statutes permit similar negotiations or employee representation exists.",
+    "case_name": [
+      "Moreau v. Klevenhagen"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Administrative standards anticipating illicit conduct scenarios prove unacceptably ambiguous for fair enforcement.",
+    "case_name": [
+      "Sessions v. Dimaya"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The government's demand for citizens to report private details exceeds its lawful authority.",
+    "case_name": [
+      "Whalen v. Roe"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Recovery of surplus public revenue deposits is effective at the moment of receipt.",
+    "case_name": [
+      "Baral v. United States",
+      "Commissioner v. Lundy"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Litigation may continue when evidence presented aligns with both permissible market conduct and illicit collusion.",
+    "case_name": [
+      "Bell Atlantic Corp. v. Twombly"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal law supersedes state-based legal actions for misrepresentations in health technology authorization.",
+    "case_name": [
+      "Buckman Company v. Plaintiffs' Legal Committee"
+    ],
+    "overruling_case": "Sprietsma v. Mercury Marine",
+    "label": "Overruled"
+  },
+  {
+    "claim": "National authorities must maintain ideological neutrality when managing spaces dedicated to citizen dialogue.",
+    "case_name": [
+      "Walker v. Texas Division, Sons of Confederate Veterans, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Entities not receiving public assistance may deny access to individuals of specific ethnic backgrounds when situated within territory under municipal control.",
+    "case_name": [
+      "Burton v. Wilmington Parking Authority"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Personal jurisdiction is properly asserted when an out-of-state party's behavior was deliberately structured to cause injury in the forum, despite habitual residence elsewhere.",
+    "case_name": [
+      "Calder v. Jones"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "To sue or appeal in federal court, a person or group must show they were personally harmed by the action in question and that a court decision could fix that harm.",
+    "case_name": [
+      "Virginia House of Delegates v. Bethune-Hill"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutes that grant producers inside sovereign borders exclusive authority to supply intoxicants to end-purchasers without intermediaries while barring external counterparts contravene constitutional principles against economic discrimination.",
+    "case_name": [
+      "Granholm v. Heald"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When sentencing, all factors extending custodial duration require adjudication by randomly selected persons.",
+    "case_name": [
+      "Cunningham v. California"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Gun purchase regulations do not require reporting ultimate recipients when both parties meet possession qualifications.",
+    "case_name": [
+      "Abramski v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Electoral boundaries adjusted to favor one political faction are subject to judicial review under established evaluation standards.",
+    "case_name": [
+      "Davis v. Bandemer"
+    ],
+    "overruling_case": "Rucho v. Common Cause",
+    "label": "Overruled"
+  },
+  {
+    "claim": "A labor agreement specifying that bias issues tied to date of birth must undergo binding non-court resolution prevents workers from pursuing legal action in Article III courts.",
+    "case_name": [
+      "14 Penn Plaza LLC v. Pyett"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The United States government faces no legal compulsion to fully pay administrative expenses for Native American healthcare contract operations, regardless of funds designated by Congress.",
+    "case_name": [
+      "Cherokee Nation of Oklahoma v. Leavitt"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Judicial decisions presume that market participants rely on fully disclosed facts influencing securities worth because Congress has not altered this presumption via legislation.",
+    "case_name": [
+      "Halliburton Co. v. Erica P. John Fund, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Temporary Protected Status does not count as a legal admission into the United States.",
+    "case_name": [
+      "Sanchez v. Mayorkas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Governmental entities must ensure detainees have access to statutes, court decisions, or professional assistance for submitting court documents.",
+    "case_name": [
+      "Bounds v. Smith"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "By statute, the legislature authorizes sole judicial handling of financial obligation remission for government-imposed charges.",
+    "case_name": [
+      "Hinck v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "For several wholly independent governmental decrees, each necessitates a separate lawsuit; the right to sue regarding one does not extend to subsequent instances.",
+    "case_name": [
+      "Lujan v. National Wildlife Federation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Constitution identifies roles that are continuously maintained and codified by statute as public officials.",
+    "case_name": [
+      "Lucia v. Securities and Exchange Commission"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Entry into a residence without knocking is permitted when law enforcement reasonably concludes disclosure of identity would create hazard.",
+    "case_name": [
+      "Richards v. Wisconsin"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Court authorization is mandatory for overturning a judgment but dispensable for upholding it.",
+    "case_name": [
+      "Jennings v. Stephens"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulations restricting public communication before dissemination mandate procedural protections against arbitrary suppression by authorities.",
+    "case_name": [
+      "Southeastern Promotions, Ltd. v. Conrad"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When a commissioned artifact is generated by someone not formally employed, the law recognizes the commissioning entity as the author.",
+    "case_name": [
+      "Community for Creative Non-Violence v. Reid"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Tribal entitlements secured through historical compacts persist in federal jurisdictions after new members join without congressional termination.",
+    "case_name": [
+      "Herrera v. Wyoming",
+      "Minnesota v. Mille Lacs Band of Chippewa Indians"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A federally maintained hiking path overseen by a conservation bureau fails to transform the underlying landscape to designated protected zones.",
+    "case_name": [
+      "United States Forest Service v. Cowpasture River Preservation Association"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal judges independently analyze all case facts during capital sanction deliberations to establish whether factors increasing punishment severity exist.",
+    "case_name": [
+      "Lewis v. Jeffers"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Constitutional law forbids fiscal differentials tied to message subject matter. It similarly invalidates disparities related to delivery channels.",
+    "case_name": [
+      "Leathers v. Medlock"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Civil action for harm stemming from routine market competition is unavailable under the organized crime statute regardless of whether criminal tactics are used.",
+    "case_name": [
+      "Anza v. Ideal Steel Supply Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Copyright protection covers user interface element arrangements.",
+    "case_name": [
+      "Lotus Development Corporation v. Borland International, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Courts can proceed with an execution even if there's a claim that the method is unconstitutional, if the claim was filed too late.",
+    "case_name": [
+      "Gomez v. United States District Court for the Northern District of California"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Prior experience with law enforcement is a factor in determining whether a person is considered to be in custody for Miranda purposes.",
+    "case_name": [
+      "Yarborough v. Alvarado"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Applicants for international travel documents may be required to disclose their political beliefs.",
+    "case_name": [
+      "Kent v. Dulles"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When a plaintiff wins a lawsuit against a federal agency, applicable law permits correcting fee application errors after the window for submission closes, so long as the defendant was not prejudiced by the oversight.",
+    "case_name": [
+      "Scarborough v. Principi"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Any watercraft that can move people or goods over water is considered a vessel under the Longshore and Harbor Workers' Compensation Act.",
+    "case_name": [
+      "Stewart v. Dutra Construction Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Whether money spent during legal proceedings qualifies as a tax write-off depends on the dispute's root cause, not the outcome.",
+    "case_name": [
+      "United States v. Gilmore"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Land patents that reserve coal only include solid coal rock and do not cover methane gas found in the coal seams.",
+    "case_name": [
+      "Amoco Production Company v. Southern Ute Indian Tribe"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Exclusive reservation of federal procurement for firms led by ex-service members is required upon anticipation of at least two competitors in the process, irrespective of meeting annual objectives.",
+    "case_name": [
+      "Kingdomware Technologies, Inc. v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State entities are not constitutionally obliged to present every perspective in managed outdoor installations.",
+    "case_name": [
+      "Pleasant Grove City v. Summum"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "States must supply legal counsel to persons lacking financial resources during post-conviction proceedings when such assistance is provided to other parties.",
+    "case_name": [
+      "Douglas v. California"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Personal care services required for a learner to access educational programming are an institutional duty, even if tasks resemble physician-led care.",
+    "case_name": [
+      "Cedar Rapids Community School Dist. v. Garret F.",
+      "Irving Independent School District v. Tatro"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "National regulatory standards prohibit state-level censorship of visual media transmissions originating from different jurisdictions, regardless of whether alcohol promotions are included in the content.",
+    "case_name": [
+      "Capital Cities Cable, Inc. v. Crisp"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The government may not change the rules governing established benefits for workers, even to avoid financial hardship for the program.",
+    "case_name": [
+      "United States Railroad Retirement Board v. Fritz"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "An admission of guilt alone does not prove the accuracy of information used to justify a search.",
+    "case_name": [
+      "United States v. Harris"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Meeting the state's minimum standard for trial does not automatically allow managing one's own case; meaningful procedural competency is a distinct prerequisite.",
+    "case_name": [
+      "Indiana v. Edwards"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutory restrictions on non-consensual speech at medical facility entrances are valid due to public entitlements to resist intrusive contact.",
+    "case_name": [
+      "Hill v. Colorado"
+    ],
+    "overruling_case": "McCullen v. Coakley",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Without explicit objection to judicial observations in court proceedings, the accused must prove those observations influenced the decision to admit guilt to secure vacatur.",
+    "case_name": [
+      "United States v. Davila"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal courts can order local governments to raise taxes to fix constitutional problems, even if state laws normally stop them from doing so.",
+    "case_name": [
+      "Adarand Constructors, Inc. v. Mineta",
+      "Allen v. Wright",
+      "Armour v. City of Indianapolis",
+      "Calderon v. Ashmus",
+      "California v. Texas",
+      "Carney v. Adams",
+      "City of Los Angeles v. Lyons",
+      "City of Rancho Palos Verdes v. Abrams",
+      "DaimlerChrysler Corp. v. Cuno",
+      "Department of Commerce v. New York",
+      "Department of Commerce v. United States House of Representatives",
+      "Exxon Corporation v. Governor of Maryland",
+      "Frank v. Gaos",
+      "Franklin v. Massachusetts",
+      "Gill v. Whitford",
+      "Hollingsworth v. Perry",
+      "Irving Independent School District v. Tatro",
+      "Lujan v. Defenders of Wildlife",
+      "Lujan v. National Wildlife Federation",
+      "Maine Community Health Options v. United States",
+      "Match-E-Be-Nash-She-Wish Band v. Patchak",
+      "Missouri v. Jenkins",
+      "Morton v. Mancari",
+      "Murel v. Baltimore City Criminal Court",
+      "National Park Hospitality Assn. v. Dept. of the Interior",
+      "Ohio Forestry Association, Inc. v. Sierra Club",
+      "Poe v. Ullman",
+      "Raines v. Byrd",
+      "Rust v. Sullivan",
+      "Salinas v. United States Railroad Retirement Board",
+      "Schweiker v. Chilicky",
+      "Sierra Club v. Morton",
+      "South Dakota v. Dole",
+      "Spokeo, Inc. v. Robins",
+      "Summers v. Earth Island Institute",
+      "Texas v. United States",
+      "TransUnion LLC v. Ramirez",
+      "Trump v. New York",
+      "United States Army Corps of Engineers v. Hawkes Co., Inc.",
+      "United States Forest Service v. Pacific Rivers Council",
+      "United States v. Sineneng-Smith",
+      "Village of Arlington Heights v. Metropolitan Housing Development Corporation",
+      "Virginia House of Delegates v. Bethune-Hill",
+      "Williams v. Zbaraz",
+      "Winter v. Natural Resources Defense Council, Inc.",
+      "Wittman v. Personhuballah"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Courts must exclude confessions obtained via unreasonable police seizures notwithstanding their freely given nature.",
+    "case_name": [
+      "Brown v. Illinois"
+    ],
+    "overruling_case": "Devenpeck v. Alford; New York v. Harris",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Authorizing private legal challenges against sovereign jurisdictions for improper utilization of exclusive creation rights falls outside the scope of constitutional authorities regulating economic exchanges among regions and innovation protection statutes.",
+    "case_name": [
+      "Florida Prepaid Post-Secondary Education Expense Board v. College Savings Bank"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When in foreign territories, American nationals retain constitutional immunity from arbitrary state action as mandated by the founding legal structure.",
+    "case_name": [
+      "Reid v. Covert"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government actions to terminate entitlements are typically legally sound and difficult to reverse despite court challenges.",
+    "case_name": [
+      "Department of Homeland Security v. Regents of the University of California",
+      "National Park Hospitality Assn. v. Dept. of the Interior",
+      "Salinas v. United States Railroad Retirement Board"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Monetary judgments substantially surpassing statutory penalties for analogous misconduct could violate constitutional due process protections.",
+    "case_name": [
+      "BMW of North America, Inc. v. Gore"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal law sets the date for all U.S. Congress and presidential elections as the Tuesday after the first Monday in November during even-numbered years.",
+    "case_name": [
+      "Foster v. Love"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "It is illegal for the government to pass laws that punish people for expressing certain viewpoints through symbolic acts.",
+    "case_name": [
+      "United States v. Eichman"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Faith-oriented observances by service members must remain unconstrained despite assertions that discipline and cohesion require such limits.",
+    "case_name": [
+      "Goldman v. Weinberger"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Schools must ensure equal treatment across genders despite having no public money; institutions without this funding are free from similar standards.",
+    "case_name": [
+      "Grove City College v. Bell"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Demonstration-free zones cannot be created when medical care remains unaffected by protest conduct.",
+    "case_name": [
+      "Madsen v. Women's Health Center, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Schools must avoid policies that make it seem like they support a particular religion.",
+    "case_name": [
+      "Santa Fe Independent School District v. Doe"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government-mandated separation by race inherently creates unequal access to rights.",
+    "case_name": [
+      "Plessy v. Ferguson"
+    ],
+    "overruling_case": "Gayle v. Browder",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Government personnel operating under legal authority must inform the titleholder of asset confiscation without detailing return protocols.",
+    "case_name": [
+      "City of West Covina v. Perkins"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Private groups can exclude members if their presence would contradict the group's stated beliefs.",
+    "case_name": [
+      "Boy Scouts of America v. Dale"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Memory loss regarding the crime does not automatically disqualify an individual from capital punishment.",
+    "case_name": [
+      "Dunn v. Madison"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulations governing residential occupancy based on kinship status must serve a rational community purpose and avoid arbitrariness to be permissible.",
+    "case_name": [
+      "Village of Belle Terre v. Boraas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State statutes authorizing courts to approve pregnancy terminations for adolescents without notifying adult guardians violate the Constitution.",
+    "case_name": [
+      "Lambert v. Wicklund"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Knowledge of possession is proven by an admission of awareness about an object's presence in one's control, despite lack of knowledge of its proscribed nature.",
+    "case_name": [
+      "Rogers v. United States"
+    ],
+    "overruling_case": "Rehaif v. United States",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Where a statute authorizes imposition of prior expulsion orders for those with illegal presence, enforcement is possible for unauthorized entries occurring prior to enactment, provided continued residence in the territory.",
+    "case_name": [
+      "Fernandez-Vargas v. Gonzales"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Sovereign jurisdictions maintain exclusive authority to set revenue valuations for assets tied to freight transportation infrastructure, and these determinations cannot be challenged in federal judicial proceedings.",
+    "case_name": [
+      "CSX Transportation, Inc. v. Georgia State Board of Equalization"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A state's issuance of a governing document fails to render an independently administered body as a state-controlled entity.",
+    "case_name": [
+      "Trustees of Dartmouth College v. Woodward"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory statutes permitting government site evaluations of private premises without judicial oversight inherently empower breaking through physical barriers to finalize the verification process.",
+    "case_name": [
+      "Colonnade Catering Corporation v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A corporation may argue that vague and general communications had no influence on equity valuation to counter claims that shareholders based their purchases on such information.",
+    "case_name": [
+      "Goldman Sachs Group Inc. v. Arkansas Teacher Retirement System"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Pre-enactment work is not governed by national statutes establishing compensation for post-employment.",
+    "case_name": [
+      "Lockheed Corporation v. Spink"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory authority over air service routes is vested exclusively in the federal government.",
+    "case_name": [
+      "Morales v. Trans World Airlines, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Judicial authorities must adhere strictly to previous determinations about treaty-based entitlements",
+    "case_name": [
+      "Herrera v. Wyoming"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Confinement until death is constitutionally permissible for criminal acts with no physical aggression, so long as a jurisdiction's recidivist statute authorizes it.",
+    "case_name": [
+      "Solem v. Helm"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Employers must guarantee that all eligible applicants receive equitable consideration for advancement opportunities, irrespective of sex, even when implementing programs designed to address historical disparities.",
+    "case_name": [
+      "Johnson v. Transportation Agency, Santa Clara Cty."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Police cannot detain someone for questioning without probable cause, even if they don't formally arrest them.",
+    "case_name": [
+      "Dunaway v. New York"
+    ],
+    "overruling_case": "Los Angeles County v. Rettele",
+    "label": "Overruled"
+  },
+  {
+    "claim": "A state's claim of ownership over territory is not dependent on prior governance or administration of that territory.",
+    "case_name": [
+      "Georgia v. South Carolina"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal labor law considers workers as employees even if they are paid by a union to organize a company.",
+    "case_name": [
+      "National Labor Relations Board v. Town & Country Electric, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Safeguarding residential tranquility and privacy provides a valid basis for curtailing stationary protest activities outside private dwellings.",
+    "case_name": [
+      "Frisby v. Schultz"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Public authorities cannot mandate relatives' validation of a person's preferences in cases where they lack communication capacity before ceasing procedures maintaining vital bodily functions.",
+    "case_name": [
+      "Cruzan by Cruzan v. Director, Missouri Department of Health"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Judicially validated resolutions must establish prior disparate impact before providing special advantage to particular demographics.",
+    "case_name": [
+      "Firefighters v. City of Cleveland"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal courts cannot stop state courts from deciding property disputes, even when a related federal case is ongoing and the federal government has a financial stake in the property.",
+    "case_name": [
+      "Leiter Minerals, Inc., v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Settlements altering party composition following transfer to a forum with diversity jurisdiction do not remedy the initial procedural flaw.",
+    "case_name": [
+      "Caterpillar Inc. v. Lewis"
+    ],
+    "overruling_case": "Grupo Dataflux v. Atlas Global Group, L.P.",
+    "label": "Overruled"
+  },
+  {
+    "claim": "If a court operating within a particular government's jurisdiction pronounces that supreme law infractions caused no harm to the legal process, U.S. review authorities must accept the ruling unless the judgment is patently groundless.",
+    "case_name": [
+      "Davis v. Ayala"
+    ],
+    "overruling_case": "Holloway v. Arkansas",
+    "label": "Overruled"
+  },
+  {
+    "claim": "When critical situations necessitate intervention, authorities may impose financial penalties against violations proportionate to the threat and intrinsically linked to the catalyst for action.",
+    "case_name": [
+      "ICC v. Oregon Pacific Industries, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Governments may restrict speech on urban thoroughfares to maintain societal peace and safety, and legislation imposing exclusion zones adjacent to medical centers providing pregnancy termination services is a constitutional exercise of state power to guarantee unhindered patient access.",
+    "case_name": [
+      "McCullen v. Coakley"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The extent of government-held property entitlements across historical conveyances includes resources lawmakers reasonably interpreted as falling within those interests when the title was transferred.",
+    "case_name": [
+      "Amoco Production Company v. Southern Ute Indian Tribe"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Taxation of inventory must apply uniformly to all commodities regardless of origin to uphold constitutional standards regarding economic activity across state lines.",
+    "case_name": [
+      "Sears, Roebuck and Co. v. County of Los Angeles and City of Compton"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Courts should defer to agency reasoning, even if that reasoning contains internal inconsistencies.",
+    "case_name": [
+      "Baltimore & Ohio Railroad Company v. Aberdeen & Rockfish Railroad Company"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Attorney service costs in non-criminal or insolvency situations are excluded from court-ordered victim compensation.",
+    "case_name": [
+      "Lagos v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "American jurisdictions may enforce monetary obligations arising from land ownership against sovereign entities from other countries.",
+    "case_name": [
+      "Permanent Mission of India to the United Nations v. City of New York"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Interception of telephonic communications without physical trespass onto private premises does not contravene constitutional safeguards against unreasonable governmental searches.",
+    "case_name": [
+      "Olmstead v. United States"
+    ],
+    "overruling_case": "Katz v. United States",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Enhanced sentencing applies solely to offenses mirroring statutory enumeration, excluding many potentially dangerous activities.",
+    "case_name": [
+      "Begay v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Laws that require patients to receive specific information about abortion procedures are unconstitutional if the purpose is to discourage them from having the procedure.",
+    "case_name": [
+      "Thornburgh v. American College of Obstetricians and Gynecologists"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Local governments do not need separate federal approval for election rules that are part of a state law already approved by federal authorities.",
+    "case_name": [
+      "City of Monroe v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When contractual dealings form the core of a claim, American tribunals have authority to adjudicate disputes against entities beyond national borders.",
+    "case_name": [
+      "Verlinden B. V. v. Central Bank of Nigeria"
+    ],
+    "overruling_case": "Nestl\\u00e9 USA, Inc. v. Doe I",
+    "label": "Overruled"
+  },
+  {
+    "claim": "The level of cognitive understanding required to forgo legal representation and act in one's own interest or to formally accept responsibility for a crime exceeds the threshold necessary for being deemed fit to proceed in court proceedings.",
+    "case_name": [
+      "Godinez v. Moran"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Travel document nullification requires explicit legislative authorization for matters of territorial defense or diplomatic relations.",
+    "case_name": [
+      "Haig v. Agee"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government attorneys may submit specialist opinions to challenge claims about the accused's cognitive functioning during the crime.",
+    "case_name": [
+      "Kansas v. Cheever"
+    ],
+    "overruling_case": "McWilliams v. Dunn",
+    "label": "Overruled"
+  },
+  {
+    "claim": "When deceptive information induced investment retention, federal legislation from 1998 bars such matters from state court proceedings.",
+    "case_name": [
+      "Merrill Lynch, Pierce, Fenner & Smith, Inc. v. Dabit"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulation of all transportation across state borders, including marine vessels, is vested in federal lawmakers.",
+    "case_name": [
+      "Gibbons v. Ogden"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Laws governing the imposition of capital punishment require precise wording to avoid inconsistent judicial rulings.",
+    "case_name": [
+      "Walton v. Arizona"
+    ],
+    "overruling_case": "Ring v. Arizona",
+    "label": "Overruled"
+  },
+  {
+    "claim": "The federal government lacks the constitutional authority to regulate state management of personal information collected in connection with state-administered licensing and registration.",
+    "case_name": [
+      "Reno v. Condon"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Judicial rationale required when shortening prison terms differs circuit by circuit.",
+    "case_name": [
+      "Chavez-Meza v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A court may proceed with a case and issue a judgment even if a legally necessary party does not participate.",
+    "case_name": [
+      "Republic of Philippines v. Pimentel"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Coercing someone to alter their professional opinion or advice through threats constitutes extortion.",
+    "case_name": [
+      "Sekhar v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When determining whether government staff functioned without improper intent, an individual's declination of healthcare services is relevant.",
+    "case_name": [
+      "O'Connor v. Donaldson"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Administrative bodies implement temporary cost adjustments when statutory law lacks explicit prohibition.",
+    "case_name": [
+      "United States v. City of Fulton"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "In copyright disputes, determining legal service compensation requires assessing the justifiability of the losing side's assertions, with other factors permitted.",
+    "case_name": [
+      "Pennsylvania v. Delaware Valley Citizens' Council for Clean Air"
+    ],
+    "overruling_case": "Kirtsaeng v. John Wiley & Sons",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Expressed views are not legally inaccurate merely due to factual errors. Inaccuracy occurs solely when the speaker lacked genuine belief.",
+    "case_name": [
+      "Omnicare, Inc. v. Laborers District Council Construction Industry Pension Fund"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Restraining individuals present during warrant execution prevents escape, protects law enforcement staff, and simplifies property inspection.",
+    "case_name": [
+      "Michigan v. Summers"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State-established timelines for contesting judicial guidance to fact-finding entities must be met to secure federal review of associated claims; otherwise, federal tribunals commonly dismiss such matters.",
+    "case_name": [
+      "Engle v. Isaac"
+    ],
+    "overruling_case": "Cone v. Bell",
+    "label": "Overruled"
+  },
+  {
+    "claim": "When electoral territory boundaries are reshaped for legislative representation, a triad of judges must convene as required by statute.",
+    "case_name": [
+      "Shapiro v. McManus"
+    ],
+    "overruling_case": "Rucho v. Common Cause",
+    "label": "Overruled"
+  },
+  {
+    "claim": "When agency personnel handle numerous similar issues, formal proceedings commence after several weeks.",
+    "case_name": [
+      "Los Angeles v. David"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Constitutional limitations on compelled testimony in criminal matters do not invalidate mandatory information reporting obligations.",
+    "case_name": [
+      "Albertson v. Subversive Activities Control Board"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Rules made by a company controlled by the government do not violate due process because the company acts as part of the government.",
+    "case_name": [
+      "U.S. Department of Transportation v. Association of American Railroads"
+    ],
+    "overruling_case": "Evans v. Newton; Flagg Bros., Inc. v. Brooks",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Compensation may be awarded for vaccine injuries even if initial symptoms occurred prior to vaccination.",
+    "case_name": [
+      "Shalala v. Whitecotton"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal drug laws cannot ban medical treatments that are legal under state law.",
+    "case_name": [
+      "Gonzales v. Oregon"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Retaliation claims under anti-discrimination laws are limited to individuals who directly engaged in the protected activity; harm to a family member due to their protected activity does not create a separate cause of action for the employee.",
+    "case_name": [
+      "Thompson v. North American Stainless, LP"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Judicial proceedings contesting agency transparency decisions are routinely dismissed when plaintiffs cannot establish concrete harm.",
+    "case_name": [
+      "Federal Election Commission v. Akins"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal statutory authority predominates over state laws when the subject is covered, even without regulatory alignment.",
+    "case_name": [
+      "Buckman Company v. Plaintiffs' Legal Committee",
+      "Exxon Corporation v. Eagerton",
+      "Food and Drug Administration v. Brown & Williamson Tobacco Corporation",
+      "National Association of Home Builders v. Defenders of Wildlife",
+      "National Meat Association v. Harris",
+      "Parker Drilling Management Services, Ltd. v. Newton",
+      "Sprietsma v. Mercury Marine",
+      "United States v. Locke"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Religious tests are unconstitutional for candidates seeking government positions.",
+    "case_name": [
+      "Torcaso v. Watkins"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When providing public funds, agencies mandate ideological conformity despite implications for constitutional speech safeguards.",
+    "case_name": [
+      "Agency for International Development v. Alliance for Open Society International"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Groupings of existing components lack patentability unless technical records prior to filing explicitly state unifying them produces the intended functionality.",
+    "case_name": [
+      "KSR International Co. v. Teleflex Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Confidentiality of hazard-related information is required as a condition of nationally funded road risk mitigation projects.",
+    "case_name": [
+      "Pierce County v. Guillen"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Laws requiring media outlets to print counterstatements in response to criticism violate constitutional press protections.",
+    "case_name": [
+      "Miami Herald Publishing Company v. Tornillo"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal law may not require sex offenders to maintain registration after conviction if the registration law was enacted after their conviction.",
+    "case_name": [
+      "United States v. Kebodeaux"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Mandating unique identifiers for public aid initiatives is reasonably justified by the need to counteract deceptive claims",
+    "case_name": [
+      "Bowen v. Roy"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A non-governmental party's generation of data during personal initiative does not render governmental use of it inconsistent with the nation's foundational legal principles.",
+    "case_name": [
+      "Hoffa v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A judge can limit discovery if the person asking for it can't explain how the extra information would help their case.",
+    "case_name": [
+      "First National Bank of Arizona v. Cities Service Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Access to judicial reexamination of trial rulings is not guaranteed when a party lacks resources to satisfy court-mandated expenses, irrespective of the claim's factual foundation.",
+    "case_name": [
+      "Coppedge v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "State authorities may not obstruct ideological organizations from participating in elections without evidence of active incitement of imminent lawlessness.",
+    "case_name": [
+      "Communist Party of Indiana v. Whitcomb"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Racial segregation in education promotes professional advancement.",
+    "case_name": [
+      "Sweatt v. Painter"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal court review of previously decided illegal search claims can reveal errors and better protect Fourth Amendment rights.",
+    "case_name": [
+      "Stone v. Powell"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Regulators must base network element lease rates on the existing provider's prior investment, and cannot consider future cost savings from technological advancements.",
+    "case_name": [
+      "Talk America, Inc. v. Michigan Bell Telephone Co.",
+      "Verizon Communications, Inc. v. Federal Communications Commission"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "State and federal resources for pupil disabilities, universally accessible, may extend to sectarian institutions without violating the foundational legal framework.",
+    "case_name": [
+      "Aguilar v. Felton",
+      "Bowen v. Kendrick",
+      "Committee for Public Education & Religious Liberty v. Nyquist",
+      "Everson v. Board of Education of the Township of Ewing",
+      "Lemon v. Kurtzman",
+      "Mitchell v. Helms",
+      "Mueller v. Allen",
+      "Roemer v. Board of Public Works of Maryland",
+      "Witters v. Washington Department of Services for the Blind",
+      "Zelman v. Simmons-Harris",
+      "Zobrest v. Catalina Foothills School District"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "National government expenditures must serve the common good and may not be employed to regulate within subnational jurisdictions.",
+    "case_name": [
+      "United States v. Butler"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government jurisdictions may exclude voter submissions from unauthorized sites when racial disparities are negligible and the regulation supports legitimate administrative objectives.",
+    "case_name": [
+      "Brnovich v. Democratic National Committee"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Law enforcement officials have no duty to communicate the focus of future interrogation to a person under scrutiny prior to consent being obtained.",
+    "case_name": [
+      "Berghuis v. Thompkins",
+      "Colorado v. Spring",
+      "Dickerson v. United States",
+      "Hutcheson v. United States",
+      "Michigan v. Bryant",
+      "Minnesota v. Murphy",
+      "Miranda v. Arizona",
+      "Salinas v. Texas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Forcing individuals convicted of past crimes to share identifiable information publicly violates constitutional safeguards against legal consequences imposed after the fact.",
+    "case_name": [
+      "Smith v. Doe"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Fundamental natural phenomena are not eligible for any form of exclusive legal right.",
+    "case_name": [
+      "Mayo Collaborative Services v. Prometheus Laboratories, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The entity responsible for academic instruction may impose consequences for statements disparaging its mission when created remotely, even without significant disruption to educational continuity.",
+    "case_name": [
+      "Mahanoy Area School District v. B.L."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The nation's legislative framework permits the use of expressions lacking procedural warnings during adjudication when assessed as not compelled.",
+    "case_name": [
+      "Dickerson v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When litigants fund judicial candidates' bids for office, officer participation in related matters is acceptable absent verifiable proof of prejudicial influence on decisions; one monetary transfer is insufficient to mandate recusal.",
+    "case_name": [
+      "Caperton v. A. T. Massey Coal Co."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Employers have legal authority to transfer personnel to safer roles or terminate employment when workplace hazards risk health deterioration.",
+    "case_name": [
+      "Chevron U.S.A., Inc. v. Echazabal"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government prohibitions against communicating public affairs perspectives are constitutionally invalid.",
+    "case_name": [
+      "Texas v. Johnson"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Preventing regulatory bodies from obtaining critical data violates statutory law.",
+    "case_name": [
+      "Arthur Andersen LLP v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When correctly administered, the use of intravenous drugs to carry out the death penalty satisfies constitutional standards barring inhumane or irregular penal measures.",
+    "case_name": [
+      "Baze v. Rees"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The execution of individuals who were under the age of 18 when they committed a crime is constitutionally permissible.",
+    "case_name": [
+      "Thompson v. Oklahoma"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Inconsistent factual findings from a prior not guilty verdict do not prevent the prosecution from pursuing unresolved allegations.",
+    "case_name": [
+      "Yeager v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Exact residential uniformity across political subdivisions is a crucial element when evaluating whether racial considerations dominated the boundary redrawing process.",
+    "case_name": [
+      "Abrams v. Johnson",
+      "Alabama Legislative Black Caucus v. Alabama",
+      "Lawyer v. Department of Justice"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "National authority may intervene in disputes among jurisdictions when the plaintiff consents and assertions are integral to the core controversy.",
+    "case_name": [
+      "Texas v. New Mexico and Colorado"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government may prevent the release of confirmed material even when secured through legal channels.",
+    "case_name": [
+      "Smith v. Daily Mail Publishing Company"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Invoking multinational accords to suppress spiritual observances necessitates proof of tangible harm from a tailored accommodation.",
+    "case_name": [
+      "Gonzales v. O Centro Espírita Beneficente União do Vegetal"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Previous judicial determinations of guilt that are logically connected are treated as a singular violation when determining penalties.",
+    "case_name": [
+      "Buford v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Public authorities may defer the filing of formal charges to complete a detailed assessment of alleged unlawful conduct, even if this process renders critical information inaccessible.",
+    "case_name": [
+      "Michigan v. Tyler",
+      "United States v. Lovasco"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Judicial recusal is statutorily triggered by evidence of pervasive antipathy toward the defendant's demographic category, irrespective of case-specific linkages.",
+    "case_name": [
+      "Berger v. New York"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A message perceived by society as originating from state authorities is classified as state communication.",
+    "case_name": [
+      "Walker v. Texas Division, Sons of Confederate Veterans, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The state must supply legal representation to individuals whose proceedings may result in custody.",
+    "case_name": [
+      "Argersinger v. Hamlin",
+      "Scott v. Illinois"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "United States federal courts may mandate the transfer of evidence for application in legal proceedings outside the United States regardless of whether local authorities have declined to request it.",
+    "case_name": [
+      "Intel Corporation v. Advanced Micro Devices, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Age-based differences in retirement benefits are allowed under federal law when the distinction is tied to retirement eligibility rules rather than age itself.",
+    "case_name": [
+      "Kentucky Retirement Systems v. EEOC"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Law enforcement officials need no specific cause for inquiries concerning legal presence in custody.",
+    "case_name": [
+      "Muehler v. Mena"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Banning all handguns in a jurisdiction violates the Second Amendment because handguns are commonly used for self-defense.",
+    "case_name": [
+      "District of Columbia v. Heller"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Employers have a legal duty to address peer-perpetrated hostility when the target and harassers share identical physiological traits and the aggression is fueled by established male and female stereotypes.",
+    "case_name": [
+      "Oncale v. Sundowner Offshore Services, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Work contracts that restrict personnel selection for specialized roles to collective bargaining entities automatically face regulatory scrutiny under U.S. competition statutes.",
+    "case_name": [
+      "Connell Constr. Company, Inc. v. Plumbers & Steamfitters Local Union of the Plumbing & Pipefitting Industry of the United States and Canada, AFL-CIO"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The illegality of information acquisition does not excuse noncompliance with response requirements in criminal charging forums.",
+    "case_name": [
+      "United States v. Calandra"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Civil service employees who experience workplace harm through purposeful agency bias may seek monetary relief.",
+    "case_name": [
+      "West v. Gibson"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When a new law reduces penalties for a crime, people sentenced after the law takes effect receive the new, lower penalties even if they committed the crime before the law existed.",
+    "case_name": [
+      "Dorsey v. United States"
+    ],
+    "overruling_case": "Peugh v. United States",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Legal challenges against individuals responsible for overseeing others' financial assets are dismissed when the earliest flawed financial choice fell outside the court's designated timeframe, despite persistent shortcomings in management.",
+    "case_name": [
+      "Tibble v. Edison International"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government restrictions on property use do not require compensation to the property owner.",
+    "case_name": [
+      "Moore v. City of East Cleveland"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Appellate review is accessible irrespective of economic circumstances.",
+    "case_name": [
+      "Coppedge v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory mandates for lessee supervision of transportation equipment do not exempt lessors from liability for injuries stemming from their own negligence.",
+    "case_name": [
+      "Transamerican Freight Lines, Inc. v. Brada Miller Freight Systems, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutory provisions excluding liability for civil wrongs shield the federal entity from compensation claims when items are retained during official functions, irrespective of individual portfolios.",
+    "case_name": [
+      "Ali v. Federal Bureau of Prisons"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When home title is compulsorily transferred to address government fiscal duties, the non-debtor co-owner secures their fair share of assets realized.",
+    "case_name": [
+      "United States v. Rodgers"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Legislative examination of current illegal conduct breaches constitutional procedural safeguards irrespective of surrendering self-incrimination protections and connection to official roles.",
+    "case_name": [
+      "Hutcheson v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Before enforcement can proceed, the responsible agency must substantiate that the positive outcomes of a hazard-mitigation mandate exceed the resource allocation requirements.",
+    "case_name": [
+      "American Textile Mfrs. Institute, Inc. v. Donovan"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "After formal accusations are made, law enforcement agencies may commence group presentations in the absence of defense advocate attendance or notification; visual confirmation events generated during these proceedings are typically admissible in court.",
+    "case_name": [
+      "United States v. Wade"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The right to a lawyer in court and the right to a lawyer during police questioning are separate legal protections. Having one does not automatically mean you have the other.",
+    "case_name": [
+      "McNeil v. Wisconsin"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Missing a deadline to file a legal claim means the court cannot consider the case.",
+    "case_name": [
+      "Allen v. Siebert"
+    ],
+    "overruling_case": "Sebelius v. Auburn Regional Medical Center",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Unenrolled individuals traveling on roads within indigenous sovereign territory may be stopped and subjected to property inspection by law enforcement officers if their actions contravene federal or state statutes and threaten community wellbeing.",
+    "case_name": [
+      "United States v. Cooley"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal statutes prohibit boundary configurations that fracture communities of color across multiple jurisdictions, impairing their ability to secure chosen representatives.",
+    "case_name": [
+      "Bush v. Vera",
+      "Thornburg v. Gingles"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Seeking a post-sentence compliance monitor is not equivalent to legal representation for constitutional protection against self-incrimination.",
+    "case_name": [
+      "Fare v. Michael C."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The mere act of rebranding student enrollment policies to match community demographics as 'inclusion' does not satisfy constitutional standards.",
+    "case_name": [
+      "Parents Involved in Community Schools v. Seattle School District No. 1"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Administrative entities face no legal obligation to assess detailed consequences of new policy frameworks on specific demographic subgroups during rulemaking grounded in empirical findings.",
+    "case_name": [
+      "FCC v. Prometheus Radio Project"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Substantiation of state wrongdoing in a fatality outweighs family efforts to maintain photographic confidentiality.",
+    "case_name": [
+      "National Archives and Records Administration v. Favish"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Financial managers of United States dependencies are appointed without upper chamber approval",
+    "case_name": [
+      "Financial Oversight and Management Board for Puerto Rico v. Aurelius Investment, LLC"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Governmental entities cannot invoke immunity against legal action accusing them of untruthful commercial communications across state boundaries.",
+    "case_name": [
+      "College Savings Bank v. Florida Prepaid Post-Secondary Education Expense Board"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Suits regarding changes to electoral processes under federal monitoring protections can be instituted in regional judicial districts not limited to Washington, D.C.",
+    "case_name": [
+      "Allen v. State Board of Elections"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Instruction aligned with spiritual traditions may be financed using government money when beneficiaries control expenditure, and the initiative is accessible irrespective of creed.",
+    "case_name": [
+      "Witters v. Washington Department of Services for the Blind"
+    ],
+    "overruling_case": "Espinoza v. Montana Department of Revenue; Texas Monthly, Inc. v. Bullock",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Those not mandated to serve on a court's adjudication panel may choose to participate.",
+    "case_name": [
+      "Hoyt v. Florida"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Establishing citizenship for a child born outside the U.S. to unmarried parents requires the same legal process for both parents.",
+    "case_name": [
+      "Flores-Villar v. United States",
+      "Miller v. Albright",
+      "Parham v. Hughes",
+      "Tuan Anh Nguyen v. Immigration and Naturalization Service"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When an individual seeks debt relief via federal court procedures, their obligations must be settled at a level commensurate with the current market value of debts, regardless of their capacity for immediate full payment.",
+    "case_name": [
+      "Till et ux. v. SCS Credit Corp."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The obligation to provide pecuniary redress does not arise when financial harm is absent for property owners.",
+    "case_name": [
+      "Brown v. Legal Foundation of Washington"
+    ],
+    "overruling_case": "Arkansas Game & Fish Commission v. United States of America; Horne v. Department of Agriculture",
+    "label": "Overruled"
+  },
+  {
+    "claim": "District boundary adjustments must not include intentional barriers against participation in elections based on race.",
+    "case_name": [
+      "Bethune-Hill v. Virginia Board of Elections",
+      "Gomillion v. Lightfoot",
+      "United Jewish Organizations of Williamsburgh, Inc. v. Carey"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Courts lack jurisdiction to hear actions against regulatory measures prior to enforcement, irrespective of imminent threats or serious repercussions.",
+    "case_name": [
+      "Abbott Laboratories v. Gardner",
+      "Adarand Constructors, Inc. v. Mineta",
+      "Allen v. Wright",
+      "Already LLC v. Nike",
+      "Alvarez v. Smith",
+      "Arizonans for Official English v. Arizona",
+      "Calderon v. Ashmus",
+      "California v. Texas",
+      "Carney v. Adams",
+      "City of Los Angeles v. Lyons",
+      "Cox v. United States",
+      "DaimlerChrysler Corp. v. Cuno",
+      "Dalmazzi v. United States",
+      "Daniels v. United States",
+      "DeFunis v. Odegaard",
+      "Department of Commerce v. New York",
+      "Department of Commerce v. United States House of Representatives",
+      "Ellis v. Dyson",
+      "Empire HealthChoice Assurance, Inc. v. McVeigh",
+      "Exxon Corporation v. Governor of Maryland",
+      "Frank v. Gaos",
+      "Franklin v. Massachusetts",
+      "Gill v. Whitford",
+      "Hollingsworth v. Perry",
+      "Lujan v. Defenders of Wildlife",
+      "Lujan v. National Wildlife Federation",
+      "Microsoft v. Baker",
+      "Mims v. Arrow Financial Services, LLC",
+      "Morton v. Mancari",
+      "Murel v. Baltimore City Criminal Court",
+      "National Park Hospitality Assn. v. Dept. of the Interior",
+      "New York State Rifle & Pistol Association Inc. v. City of New York",
+      "Ohio Forestry Association, Inc. v. Sierra Club",
+      "Patchak v. Zinke",
+      "Poe v. Ullman",
+      "Raines v. Byrd",
+      "Salinas v. United States Railroad Retirement Board",
+      "Sierra Club v. Morton",
+      "Spencer v. Kemna",
+      "Spokeo, Inc. v. Robins",
+      "Steffel v. Thompson",
+      "Summers v. Earth Island Institute",
+      "Texas v. United States",
+      "TransUnion LLC v. Ramirez",
+      "Trump v. New York",
+      "United States Army Corps of Engineers v. Hawkes Co., Inc.",
+      "United States Forest Service v. Pacific Rivers Council",
+      "United States v. Juvenile Male",
+      "United States v. Sanchez-Gomez",
+      "United States v. Sineneng-Smith",
+      "Village of Arlington Heights v. Metropolitan Housing Development Corporation",
+      "Virginia House of Delegates v. Bethune-Hill",
+      "Williams v. Zbaraz",
+      "Winter v. Natural Resources Defense Council, Inc.",
+      "Wittman v. Personhuballah"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Courts must decide whether asset management charges are excessive compared to duties performed.",
+    "case_name": [
+      "Jones v. Harris Associates L.P."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Personnel responsible for homeland security checkpoints may temporarily withhold a person's freedom without a warrant when indications point to narcotics hidden inside the body.",
+    "case_name": [
+      "United States v. Montoya de Hernandez"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Constitutional entitlement allows defendants to proceed without counsel during trials but is inapplicable to appeals.",
+    "case_name": [
+      "Martinez v. Court of Appeals of Cal., Fourth Appellate Dist."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "U.S. judicial assessment of state court rulings regarding unauthorized governmental entries deters law enforcement improprieties and upholds the Bill of Rights' privacy protections.",
+    "case_name": [
+      "Stone v. Powell"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Out-of-court declarations are permissible during the process of initiating criminal charges.",
+    "case_name": [
+      "Umans v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The law does not allow a guilty plea to be accepted unless the defendant understands their right to a trial by jury.",
+    "case_name": [
+      "Boykin v. Alabama"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A search conducted under an immigration warrant is unconstitutional if the primary purpose of the search is to gather evidence for a criminal prosecution, as it violates the Fourth Amendment's warrant requirements for criminal investigations.",
+    "case_name": [
+      "Abel v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Special government powers, like regulating alcohol, do not allow laws that treat men and women differently without evidence.",
+    "case_name": [
+      "Craig v. Boren"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Jurisdictions possess the authority to modify or terminate financial relief provisions tied to prior cross-border compacts during adoption of updated vehicle licensing systems.",
+    "case_name": [
+      "Yellow Transportation, Inc. v. Michigan"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Lawyers may provide pro bono representation through charitable organizations for constitutional protection issues without facing penalties so long as there is no profit motive.",
+    "case_name": [
+      "In re Primus"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Law enforcement personnel may employ physical intervention as long as immediate peril to public safety exists.",
+    "case_name": [
+      "Plumhoff v. Rickard"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Receiving the initial claims without the corresponding response directive does not start the U.S. district court transfer timeline; both documents must be transmitted together to trigger the countdown.",
+    "case_name": [
+      "Murphy Brothers, Inc. v. Michetti Pipe Stringing, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Retaliation against employees for seeking a worker-nominated advocate during possible disciplinary discussions violates the law.",
+    "case_name": [
+      "International Ladies' Garment Workers' Union v. Quality Manufacturing Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal law mandates periodic bond hearings for detained noncitizens.",
+    "case_name": [
+      "Jennings v. Rodriguez"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When facing criminal accusations, individuals must be allowed to provide relevant information that supports their position pursuant to the country's chief legal standard.",
+    "case_name": [
+      "Montana v. Egelhoff"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "States can regulate activities that occur within their own territory, even if most of the project is located in another state.",
+    "case_name": [
+      "New Jersey v. Delaware"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Exempt from public disclosure are preparatory records generated prior to a federal entity's ultimate resolution.",
+    "case_name": [
+      "U.S. Fish and Wildlife Service v. Sierra Club"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The President's designation of individuals participating in hostilities against the United States cannot be challenged in any judicial proceeding.",
+    "case_name": [
+      "Hamdi v. Rumsfeld"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A federal official overseeing population statistics exercises statutory discretion to set enumeration procedures without judicial intervention.",
+    "case_name": [
+      "Wisconsin v. City of New York"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Despite deceptive tactics, law enforcement's access to private property gains enforceable permission when the occupant's cooperation is inevitable.",
+    "case_name": [
+      "Bumper v. North Carolina"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal labor law protects employees' right to pursue collective legal action against their employers.",
+    "case_name": [
+      "Epic Systems Corp. v. Lewis"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government actions suppressing public discourse in general-use territories are typically inconsistent with charter-based legal standards",
+    "case_name": [
+      "International Society for Krishna Consciousness, Inc. v. Lee"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Individuals detained by the United States on leased Cuban territory are entitled to fair judicial proceedings mandated by the nation's supreme law and protections ensured by international humanitarian law treaties.",
+    "case_name": [
+      "Boumediene v. Bush"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "U.S. false designation of origin law does not require attribution for works not protected by copyright law.",
+    "case_name": [
+      "Dastar Corporation v. Twentieth Century Fox Film Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Time spent in custody before criminal trial, when applied to a new prison term, interrupts required community supervision.",
+    "case_name": [
+      "Mont v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Due Process Clause prevents states from applying criminal laws to conduct that the laws do not actually prohibit.",
+    "case_name": [
+      "Fiore v. White"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Correctional authorities may deny specific items to persons engaged in misconduct; access is restored following behavioral improvement.",
+    "case_name": [
+      "Beard v. Banks"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Agencies can make rules take effect immediately while still allowing the public to comment on them, as long as they follow the required procedures.",
+    "case_name": [
+      "Little Sisters of the Poor Saints Peter and Paul Home v. Pennsylvania"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Executive branch handles statutory enforcement, legislative body creates new rules.",
+    "case_name": [
+      "Youngstown Sheet & Tube Company v. Sawyer"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The person charged with a crime has guaranteed access to a legal advocate when police seek a witness's confirmation of the suspect's appearance.",
+    "case_name": [
+      "United States v. Ash"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Law enforcement's use of duress to extract an admission of guilt remains unlawful regardless of other independent factual groundwork.",
+    "case_name": [
+      "Haynes v. Washington"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When a procedural measure is implemented in the vast majority of relevant situations, it meets procedural adherence thresholds.",
+    "case_name": [
+      "Johnson v. Lee"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Accuracy of eyewitness testimony is assessed by triers of fact during court proceedings using adversarial questioning and judicial directives.",
+    "case_name": [
+      "Watkins v. Sowders"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A complete ban on distributing printed materials like flyers in airport terminals is permissible under the First Amendment, as the authorites' interest in maintaining security outweighs the limited free speech rights of individuals seeking to distribute literature.",
+    "case_name": [
+      "Lee v. International Society for Krishna Consciousness, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Public officials compelling news media to identify persons who delivered information under pledge of anonymity infringes on the constitutional safeguard of journalistic liberty.",
+    "case_name": [
+      "Branzburg v. Hayes"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Using a right angle to adjust a river boundary when islands are present is not a valid legal method for determining state borders.",
+    "case_name": [
+      "Georgia v. South Carolina"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Legal advocates in capital punishment trials must adhere to customary protocols for assembling the accused's comprehensive personal background information.",
+    "case_name": [
+      "Wiggins v. Smith"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The U.S. legislative branch may prohibit any corrupt payments directed at government personnel in entities administering taxpayer dollars to prevent misappropriation.",
+    "case_name": [
+      "Sabri v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutes mandating permanent confinement for adolescent homicide offenders with no possibility of freedom violate constitutional safeguards.",
+    "case_name": [
+      "Jones v. Mississippi",
+      "Miller v. Alabama"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State laws can protect life insurance proceeds from being used to pay federal tax debts.",
+    "case_name": [
+      "Meyer v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Pre-adjudication dismissal is appropriate solely when the factual record is beyond dispute, preventing any unbiased observer from supporting the counterparty's stance.",
+    "case_name": [
+      "Anderson v. Liberty Lobby, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federally mandated environmental permissions cover harmful emissions at production facilities and exclude transportation routes.",
+    "case_name": [
+      "Decker v. Northwest Environmental Defense Center"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Bank fraud charges do not apply when the bank's role in the fraud scheme is only minor or indirect.",
+    "case_name": [
+      "Loughrin v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Juries must be apprised of statutory barriers against early release only if these barriers exist during penalty assignment.",
+    "case_name": [
+      "Ramdass v. Angelone"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The 1933 measure ending Prohibition empowers subnational governments to oversee spirituous beverage sales even as they undermine foundational national principles.",
+    "case_name": [
+      "44 Liquormart Inc. v. Rhode Island"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Later filings to challenge a conviction can be considered as if filed with the original challenge, even if they raise new issues, so long as all challenges stem from the same trial and conviction.",
+    "case_name": [
+      "Mayle v. Felix"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "If elements supporting a prohibited ground for capital punishment also exist in a lawful alternative, that ground does not affect the ruling's validity under the country's highest law.",
+    "case_name": [
+      "Abdul-Kabir v. Quarterman",
+      "Ayers v. Belmontes",
+      "Brown v. Sanders",
+      "Smith v. Texas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory authorities possess the power to stop telecom infrastructure owners from segmenting system components before enabling new market entrants to utilize the infrastructure.",
+    "case_name": [
+      "AT&T Corporation v. Iowa Utilities Board"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The statutory deadline for takings suits against the United States is unwaivable and jurisdictional, irrespective of any consensus between litigants.",
+    "case_name": [
+      "John R. Sand & Gravel Company v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Laws curbing access for young persons to digitally mediated play experiences must be structured to address only the core problem without wider application.",
+    "case_name": [
+      "Brown v. Entertainment Merchants Association"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Claims of unjustified physical coercion do not require proof of significant bodily harm.",
+    "case_name": [
+      "Wilkins v. Gaddy"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Jurisdictional statutes regulate how foundational document mandates address old legal disputes.",
+    "case_name": [
+      "Danforth v. Minnesota"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Judges in regional federal courts may evaluate whether prior rulings on detention request deadlines were erroneous, exempting them from higher court intervention requirements.",
+    "case_name": [
+      "Gonzalez v. Crosby"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal and state judicial systems uniformly apply rules regarding public dissemination of information and possible panel prejudice to safeguard due process protections.",
+    "case_name": [
+      "Murphy v. Florida"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Custodial authorities may curtail exchange between prison residents and judicial system advocates.",
+    "case_name": [
+      "Procunier v. Martinez"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When a student's academic history is shared without consent, affected parties may claim monetary redress under statutory confidentiality obligations.",
+    "case_name": [
+      "Gonzaga University v. Doe"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Persons subjected to forced servitude are legally classified as assets; state confiscation requires adherence to procedural fairness standards.",
+    "case_name": [
+      "Dred Scott v. Sandford"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The government can fine broadcasters for airing indecent language on radio or TV, even if the words are not legally obscene.",
+    "case_name": [
+      "Federal Communications Commission v. Pacifica Foundation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "States have the authority to enforce their laws on tribal lands.",
+    "case_name": [
+      "Williams v. Lee"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When individuals acting on properly issued court directives seize holdings, federal constitutional law does not hold them accountable for deprivation claims.",
+    "case_name": [
+      "City of Cuyahoga Falls v. Buckeye Community Hope",
+      "Lugar v. Edmondson Oil Company, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Upon an individual's resignation due to unlawful disparate treatment, the limitation period for legal redress commences.",
+    "case_name": [
+      "Green v. Brennan"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Laws regulating digital communications must factor in how they work, avoiding unnecessary expression limitations.",
+    "case_name": [
+      "Reno v. ACLU"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Failure to pay obligations that courts can discharge is not a valid reason for government to revoke communications authorizations.",
+    "case_name": [
+      "Federal Communications Commission v. Nextwave Personal Communications, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Restrictions on reading materials are allowed when allowing them would likely increase security risks.",
+    "case_name": [
+      "Beard v. Banks"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government oversight evaluations generate data that fails to inherently become widely accessible, permitting private parties to initiate lawsuits.",
+    "case_name": [
+      "Graham County Soil and Water Conservation District v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Employment eligibility verification for individuals may be required by US state governments when national legislation does not mandate such use of electronic platforms.",
+    "case_name": [
+      "Chamber of Commerce of the United States v. Whiting"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "States may not ignore due process rights by requiring citizens to submit fiscal charges up-front before litigation seeking restitution, when there was reasonable basis to believe funds would be returned.",
+    "case_name": [
+      "Newsweek, Inc. v. Florida Department of Revenue"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Lack of resources for judicial expenses does not generate entitlement to review a guilty verdict.",
+    "case_name": [
+      "Coppedge v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "During administrative detention of a motor vehicle for minor infractions, the operator may be required to exit irrespective of whether danger is suspected.",
+    "case_name": [
+      "Brendlin v. California",
+      "Pennsylvania v. Mimms"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Corporations can spend money to support or oppose political candidates.",
+    "case_name": [
+      "American Tradition Partnership, Inc. v. Bullock"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "U.S. law criminalizes hindering movement across jurisdictional boundaries exclusively when it stems from a coordinated scheme to halt that transit involving public officials.",
+    "case_name": [
+      "United States v. Guest"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "If corporate integration reduces market contestability, regulatory authorities may order the disposal of purchased assets.",
+    "case_name": [
+      "Brown Shoe Company, Inc. v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Police are legally prohibited from entering a home without a valid warrant.",
+    "case_name": [
+      "Michigan v. Fisher"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Tax implications of business distributions depend solely on entity profits and original investment amount; the taxpayer's declared purpose at receipt has no legal bearing.",
+    "case_name": [
+      "Boulware v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Employers are responsible for the harmful acts of their employees.",
+    "case_name": [
+      "Board of Comm'rs of Bryan Cty. v. Brown"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Correctional facilities require no proof of specific peril before curtailing confined individuals' activities when constraints appropriately align with safety preservation.",
+    "case_name": [
+      "Block v. Rutherford"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Immigration officials may exclude applicants from the citizenry based on undisclosed facts, even when no other reasons exist.",
+    "case_name": [
+      "Chaunt v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Public governance bodies are not required to engage individuals from varied spiritual backgrounds during authorized ceremonial events.",
+    "case_name": [
+      "Town of Greece v. Galloway"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Constitutional protections against unreasonable intrusions are heightened for those enrolled in educational institution programs, prohibiting substance screenings without case-specific cause.",
+    "case_name": [
+      "Board of Ed. of Independent School Dist. No. 92 of Pottawatomie Cty. v. Earls"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "An individual may decline providing government-mandated information when disclosure would self-incriminate.",
+    "case_name": [
+      "Marchetti v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Land created by filling around an existing island becomes part of the state that owned the island before the filling, regardless of prior ownership of the submerged land.",
+    "case_name": [
+      "New Jersey v. New York"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Even if a suitcase is inside a vehicle, police still need a warrant to search it.",
+    "case_name": [
+      "Arkansas v. Sanders"
+    ],
+    "overruling_case": "New York v. Belton; Wyoming v. Houghton",
+    "label": "Overruled"
+  },
+  {
+    "claim": "State-chartered organizations lack an entitlement to fund elections for public office under the nation's founding document.",
+    "case_name": [
+      "Federal Election Commission v. Beaumont"
+    ],
+    "overruling_case": "American Tradition Partnership, Inc. v. Bullock",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Determining judicial propriety requires that the forum's necessary justification for the matter supersedes the corporation's practical hurdles of defense.",
+    "case_name": [
+      "Asahi Metal Industry Co. v. Superior Court of Cal., Solano Cty."
+    ],
+    "overruling_case": "Walden v. Fiore",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Lawsuits generally require payment of applicable fees.",
+    "case_name": [
+      "Antonelli v. United States",
+      "Judd v. United States Dist. Court for Western Dist. of Tex."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The constitutional guarantee of consistent legal treatment is undermined by retroactive penalty increases.",
+    "case_name": [
+      "Dobbert v. Florida"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Broadcasters conveying governmental positions must air opposing perspectives.",
+    "case_name": [
+      "Red Lion Broadcasting Co. v. FCC"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Employers must not deny career advancement to staff based on male or female status.",
+    "case_name": [
+      "Hishon v. King & Spalding"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Rules that cause a large group to be left out of juries are illegal.",
+    "case_name": [
+      "Taylor v. Louisiana"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "An individual facing criminal charges has a constitutional guarantee of an expeditious judicial proceeding, irrespective of consent to continuances.",
+    "case_name": [
+      "Barker v. Wingo"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Oversight of business-related financial activities during elections is a task for governments below the federal level.",
+    "case_name": [
+      "American Tradition Partnership, Inc. v. Bullock",
+      "Citizens United v. Federal Election Commission",
+      "Colorado Republican Federal Campaign Committee v. Federal Election Commission",
+      "Federal Election Commission v. Beaumont",
+      "Federal Election Commission v. Colorado Republican Federal Campaign Committee",
+      "Federal Election Commission v. National Conservative Political Action Committee"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Constitutional protections against compelled testimony for criminal conviction nullify government demands for truthful statements confirming illegal activity on paperwork.",
+    "case_name": [
+      "Albertson v. Subversive Activities Control Board",
+      "Doe v. United States",
+      "Hiibel v. Sixth Judicial District Court of Nevada, Humboldt County",
+      "McKune v. Lile",
+      "Pennsylvania v. Muniz",
+      "Salinas v. Texas",
+      "Schmerber v. California"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Tax law mandates that corporations sharing a tax document aggregate damages from lawsuits concerning manufactured goods into one collective figure.",
+    "case_name": [
+      "United Dominion Industries, Inc. v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Correctional facilities are permitted to limit specific items when security can be maintained only through such constraints.",
+    "case_name": [
+      "Beard v. Banks"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Reporting harassment to an employer is required to be protected from retaliation under anti-discrimination laws; participation in an investigation alone is not enough.",
+    "case_name": [
+      "Crawford v. Nashville and Davidson County, TN"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When law enforcement is conducting a vehicle-related lawful hold and observes a suspicious device, they may inspect the motorist without needing judicial permission.",
+    "case_name": [
+      "Pennsylvania v. Mimms"
+    ],
+    "overruling_case": "Arizona v. Hicks",
+    "label": "Overruled"
+  },
+  {
+    "claim": "An accused person's admission of culpability in court does not automatically lose validity merely for being motivated to evade execution.",
+    "case_name": [
+      "Brady v. United States",
+      "North Carolina v. Alford"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Courts cannot use the Terrorism Risk Insurance Act to seize assets that weren't frozen when the court made its decision.",
+    "case_name": [
+      "Ministry of Defense and Support for Armed Forces of Islamic Republic of Iran v. Elahi"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A brief mental health evaluation is enough to establish a defendant's competency to stand trial.",
+    "case_name": [
+      "Dusky v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "If a person has been charged in both state and federal court for the same crime, this can justify a lower sentence.",
+    "case_name": [
+      "Koon v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Courts may not dismiss cases involving slight injuries resulting from abusive custodial conduct merely due to the absence of significant harm.",
+    "case_name": [
+      "Wilkins v. Gaddy"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Unauthorized securities dealings incur liability solely when personal economic gain comes from proprietary firm data.",
+    "case_name": [
+      "Dirks v. Securities and Exchange Commission",
+      "United States v. O'Hagan"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When legal proceedings persist in subnational frameworks, the national judiciary lacks jurisdiction over challenges to them.",
+    "case_name": [
+      "Pennzoil Co. v. Texaco Inc."
+    ],
+    "overruling_case": "Setser v. United States",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Law enforcement personnel must independently confirm certain information elements from a source prior to taking an individual into custody.",
+    "case_name": [
+      "Draper v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "States are barred from compelling minors' enrollment in exclusively taxpayer-financed academic institutions.",
+    "case_name": [
+      "Pierce v. Society of Sisters"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Deadlines for initiating lawsuits in federal workforce notification cases are dictated by jurisdiction-specific legislative enactments.",
+    "case_name": [
+      "North Star Steel Company v. Thomas"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Courts evaluate the significance of withheld information through determining whether the proceeding's outcome might change upon disclosure",
+    "case_name": [
+      "United States v. Bagley"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Two distinct authorities sharing a single constitutional foundation merge to block successive prosecutions of identical offenses.",
+    "case_name": [
+      "Puerto Rico v. Sanchez Valle"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government officials can be held liable for violating someone's constitutional rights, regardless of their intent.",
+    "case_name": [
+      "Wood v. Strickland"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Public sector entities are required to evaluate ecological impacts stemming from their decisions regardless of whether such impacts originate from entities external to their direct oversight.",
+    "case_name": [
+      "Department of Transportation v. Public Citizen"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Public authorities may hold off on examining financial burdens upon confirming the necessity of imposed obligations.",
+    "case_name": [
+      "Michigan v. Environmental Protection Agency"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Employers cannot sanction staff for objecting to illegal workplace practices but may penalize concerns regarding permissible activities.",
+    "case_name": [
+      "Clark County School District v. Breeden"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Evidence of color-based notations in government counsel's documentation and rationales for excluding candidates does not automatically constitute proof of discriminatory intent during the formation of the decision-making panel.",
+    "case_name": [
+      "Foster v. Chatman"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A defendant can be tried multiple times for the same crime, even after a trial results in a non-conviction.",
+    "case_name": [
+      "Martinez v. Illinois"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The resolution of a collective judicial proceeding binds all participants, precluding personal litigation for the same issue regardless of representation effectiveness.",
+    "case_name": [
+      "Dow Chemical Company v. Stephenson"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When the written agreement lacks an explicit ban on resolving multiple disputes jointly, the appointed neutral evaluates whether the aggregated claims may proceed.",
+    "case_name": [
+      "Green Tree Financial Corp. v. Bazzle"
+    ],
+    "overruling_case": "American Express Co., et al. v. Italian Colors Restaurant; Kindred Nursing Centers Limited Partnership v. Clark; Stolt-Nielsen v. Animalfeeds International Corp.",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Mandated race-based numerical requirements in taxpayer-funded building projects violate constitutional principles unless tied to documented local harm.",
+    "case_name": [
+      "City of Richmond v. J. A. Croson Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Corporate contracts may contain language prohibiting individuals from combining their legal claims, and such clauses are legally binding.",
+    "case_name": [
+      "American Express Co., et al. v. Italian Colors Restaurant",
+      "Epic Systems Corp. v. Lewis"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory oversight of direct-democracy legislative proposals is permissible when preserving the legitimacy of signature-based initiative procedures.",
+    "case_name": [
+      "Buckley v. American Constitutional Law Foundation Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government counsel need not anticipate judicial proceedings prior to extending a guilty-admission settlement.",
+    "case_name": [
+      "United States v. Ruiz"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The right to question a witness in court only applies to statements made with the intention of being used as evidence.",
+    "case_name": [
+      "Davis v. Washington"
+    ],
+    "overruling_case": "Melendez-Diaz v. Massachusetts",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Education authorities may conduct substance testing of pupils to enforce physical security amid verified hazards.",
+    "case_name": [
+      "Vernonia School District 47J v. Acton"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The U.S. Constitution empowers legislators to restrict the dissemination of individual-specific data by governmental bodies operating below the national level.",
+    "case_name": [
+      "Reno v. Condon"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Constitution's free speech clauses do not shield protests that disrupt commerce, permitting legal bans on such activities.",
+    "case_name": [
+      "American Radio Assn., AFL-CIO v. Mobile Steamship Assn., Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Public officials must not place location-determining instruments on private assets in the absence of prior judicial authorization.",
+    "case_name": [
+      "United States v. Jones"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal courts may order the disclosure of therapy session records in civil cases, even if the patient does not consent, because there is no federal psychotherapist-patient privilege.",
+    "case_name": [
+      "Jaffee v. Redmond"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Statutory rules assign sole authority to the jurisdiction's chief legal officer for appearing in court on behalf of the government, excluding all other agencies from such engagement.",
+    "case_name": [
+      "Virginia House of Delegates v. Bethune-Hill"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "For-profit companies may not seek religious exemptions under the Religious Freedom Restoration Act.",
+    "case_name": [
+      "Burwell v. Hobby Lobby Stores"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When the administration declines to champion a statute, legislative representatives are barred from advancing it in judicial proceedings.",
+    "case_name": [
+      "United States v. Windsor"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Communication regulations relating to conveyed information are permissible if diplomatic relations are the objective, despite unclear criteria.",
+    "case_name": [
+      "Boos v. Barry"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A coverage provider performing the simultaneous functions of verifying coverage eligibility and disbursing payments does not automatically render its determinations legally null.",
+    "case_name": [
+      "Metropolitan Life Ins. Co. v. Glenn"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The federal government cannot override state-defined ballot qualification timelines without demonstrable harm rooted in skin color distinctions; this authority is constitutionally reserved for subnational governance.",
+    "case_name": [
+      "Oregon v. Mitchell"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The person must be given written notice of the specific charges and all evidence the government plans to use against them before the hearing.",
+    "case_name": [
+      "Morrissey v. Brewer"
+    ],
+    "overruling_case": "Dusenbery v. United States",
+    "label": "Overruled"
+  },
+  {
+    "claim": "A court must consider all significant changes before deciding whether to keep a ruling in place.",
+    "case_name": [
+      "Horne v. Flores"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "For a statutory right of exclusivity to be sufficiently precise, the entirety of all related submissions and communications—including initial filing, procedural amendments, and agency replies—is required to be assessed holistically.",
+    "case_name": [
+      "Nautilus, Inc. v. Biosig Instruments, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Business conducted on Indian reservations under federal contract is not subject to state taxation.",
+    "case_name": [
+      "Arizona Department of Revenue v. Blaze Construction Company"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Municipalities cannot require permits when citizens enter private residences to discuss governmental issues based on deception concerns.",
+    "case_name": [
+      "Watchtower Bible & Tract Soc'y of New York, Inc. v. Village of Stratton"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Sentencing for first-degree murder is vested with the court rather than a panel of citizens.",
+    "case_name": [
+      "Walton v. Arizona"
+    ],
+    "overruling_case": "Hurst v. Florida; Ring v. Arizona",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Changes to monetary obligation structures fail to provide the American judiciary's authority to adjudicate cases against sovereign nations.",
+    "case_name": [
+      "Republic of Argentina v. Weltover, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Statutory provisions permit only designated expense reimbursements, despite judicial latitude in unrelated contexts.",
+    "case_name": [
+      "Taniguchi v. Kan Pacific Saipan"
+    ],
+    "overruling_case": "Octane Fitness v. ICON Health & Fitness",
+    "label": "Overruled"
+  },
+  {
+    "claim": "The American pastime falls outside the reach of subnational competition regulations.",
+    "case_name": [
+      "Flood v. Kuhn"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Publicly disclosing price information strengthens market competition.",
+    "case_name": [
+      "Bates v. State Bar of Arizona"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Judicial bodies may decline to grant preliminary injunctions when their issuance would jeopardize the common good.",
+    "case_name": [
+      "Benisek v. Lamone"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Public transportation passengers are legally required to be separated by skin color.",
+    "case_name": [
+      "Gayle v. Browder"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Moving polluted water between sections of the same river does not count as a discharge under the Clean Water Act.",
+    "case_name": [
+      "Los Angeles County Flood Control District v. Natural Resources Defense Council, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A guilty verdict for public commotion incitement requires proof that protest activities produced actual or potential unrest.",
+    "case_name": [
+      "Garner v. Louisiana"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "State courts can hear lawsuits against unions for blocking someone from working during a strike.",
+    "case_name": [
+      "International Union, United Automobile, Aircraft and Agricultural Implement Workers of America (UAW-CIO) v. Russell"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal legislators may mandate the detention without bond of non-citizens convicted of particular violations while their deportation cases are processed.",
+    "case_name": [
+      "Demore v. Kim"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Individuals awarded federal financial benefits due to work incapacity retain the ability to sue employers who terminated them for violation of employment-related anti-discrimination statutes targeting physical or mental limitations.",
+    "case_name": [
+      "Cleveland v. Policy Management Systems Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Immigration officials must provide justification for refusing travel permits.",
+    "case_name": [
+      "Kerry v. Din"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Proceeding to contest a regulatory mandate through judicial channels does not require exhausted internal procedures.",
+    "case_name": [
+      "PDR Network, LLC v. Carlton & Harris Chiropractic Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "To get a temporary court order blocking a law, a person must show they are likely to win their case after a full trial.",
+    "case_name": [
+      "Benisek v. Lamone"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When airlines disregard safety issues raised by onboard individuals, resulting in physical harm, they must compensate despite prior health conditions.",
+    "case_name": [
+      "Olympic Airways v. Husain"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A prosecution waiver of the statutory time constraint for submissions precludes subsequent use of it to terminate proceedings.",
+    "case_name": [
+      "Eberhart v. United States",
+      "Wood v. Milyard"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "To ensure community welfare while upholding prior arrangements, state governments may impose constraints on the monetary thresholds of essential goods to safeguard purchasers against sudden volatility.",
+    "case_name": [
+      "Energy Reserves Group, Inc. v. Kansas City Power & Light Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The fixation of expression qualifies for statutory safeguards, with concepts and operational specifications excluded from coverage.",
+    "case_name": [
+      "Google LLC v. Oracle America Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutes permit defense representatives to withhold specific information within penalty proceedings when it benefits the accused's tactical interests.",
+    "case_name": [
+      "Wood v. Allen"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "U.S. statutes designed to penalize coordinated illegal schemes undermining personal guarantees were enacted to address race-driven physical assaults and safeguard core legal protections.",
+    "case_name": [
+      "United States v. Price"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulatory standards for asset equivalence do not alter fiscal consequences of transactions.",
+    "case_name": [
+      "Cottage Savings Association v. Commissioner of Internal Revenue"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Immigration authorities must consider the severity of an applicant's criminal history in relation to the potential for political persecution when determining asylum eligibility.",
+    "case_name": [
+      "Immigration & Naturalization Service v. Aguirre-Aguirre"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Exhibiting something capable of causing bodily damage in the midst of an offense doesn't always produce terror, so this action isn't automatically categorized as employing an item that endangers personal security.",
+    "case_name": [
+      "McLaughlin v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Under federal workplace benefits legislation from 1974, state governments can mandate that companies serve in an intermediary role for worker medical insurance plans.",
+    "case_name": [
+      "UNUM Life Insurance Company of America v. Ward"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A challenge to unlawful detention can succeed even without naming the immediate custodian as a defendant, if the government impedes the legal process for bringing the challenge.",
+    "case_name": [
+      "Rumsfeld v. Padilla"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government must supply counsel to defendants in trials outside federal authority who are unable to pay for legal representation.",
+    "case_name": [
+      "Gideon v. Wainwright"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal law requires employers to cover the costs of medical check-ups for employees, even for conditions not yet manifested as a disease.",
+    "case_name": [
+      "Metro-North Commuter Railroad Company v. Buckley"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A marital dissolution agreement disposing of retirement plan entitlements is not invalidated by federal statute barring such transfers.",
+    "case_name": [
+      "Kennedy v. Plan Administrator for DuPont Sav. and Investment Plan"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Congressional probes necessitate topical queries.",
+    "case_name": [
+      "Wilkinson v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Rules that set candidate inclusion criteria for voter consideration may be allowed when they deter interference in the voting procedure and produce a conclusive outcome.",
+    "case_name": [
+      "Williams v. Rhodes"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "In order to sue against redrawn political maps, plaintiffs must prove they reside in the altered areas to gain court access.",
+    "case_name": [
+      "Alabama Legislative Black Caucus v. Alabama"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Conflicts about fiscal adjustment payments between sister entities do not fall under federal judicially established principles.",
+    "case_name": [
+      "Rodriguez v. Federal Deposit Insurance Corp."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal courts will not consider constitutional issues that state courts did not address in their rulings.",
+    "case_name": [
+      "Adams v. Robertson"
+    ],
+    "overruling_case": "Wilson v. Sellers",
+    "label": "Overruled"
+  },
+  {
+    "claim": "A jurisdictional statute that prohibits co-defendants from offering mutually supportive sworn declarations conflicts with the constitutional safeguard for presenting exonerating evidence.",
+    "case_name": [
+      "Washington v. Texas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A state agency cannot ignore a federal court order to hand over property just because it has a contract with the person requesting it.",
+    "case_name": [
+      "Florida Department of State v. Treasure Salvors, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Changes to the funding mechanics of a post-service benefit structure or mandated early exit subsidies may legally qualify as termination of the program under national statute, risking noncompliance with statutory protections for those receiving ongoing payments.",
+    "case_name": [
+      "Hughes Aircraft Company v. Jacobson"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "State authorities must ensure equitable treatment across each doctrinal system and secular perspectives without privileging any single framework above another.",
+    "case_name": [
+      "Board of Education or Kiryas Joel Village School District v. Grumet"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Legally empowered institutions may overturn executive department determinations where alternative legal standards are utilized and statutory authorization exists.",
+    "case_name": [
+      "B&B Hardware Inc. v. Hargis Industries Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A police restriction on entry into a home is a violation of the Fourth Amendment.",
+    "case_name": [
+      "Illinois v. McArthur"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Federal banking regulations do not prevent states from enforcing their own laws against banks for breaking those laws.",
+    "case_name": [
+      "Cuomo v. Clearing House Assn., L. L. C."
+    ],
+    "overruling_case": "Kurns v. Railroad Friction Products Corp.",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Public officials cannot compel individuals to disclose details obtained through unlawfully conducted wiretaps.",
+    "case_name": [
+      "Gelbard v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Compelling self-incriminating testimony under threat of employment termination offends constitutional safeguards.",
+    "case_name": [
+      "Garrity v. New Jersey"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "An offense's definition need not incorporate a threshold of financial harm to trigger removal.",
+    "case_name": [
+      "Nijhawan v. Holder"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Constitution does not mandate a periodic census, and the executive branch has complete authority to decide whether and how to conduct one.",
+    "case_name": [
+      "Wisconsin v. City of New York"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A quick hearing after a license suspension for refusing a breathalyzer test is all the law requires.",
+    "case_name": [
+      "Mackey v. Montrym"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Unlawful residents in the United States hold rights solely as granted through federal statute, not from the supreme law of the land.",
+    "case_name": [
+      "Department of Homeland Security v. Thuraissigiam"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Persons may decline to provide statements under oath upon reasonably apprehending criminal accountability from a foreign state.",
+    "case_name": [
+      "United States v. Balsys"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Monetary claims against the United States require explicit legislative authorization prior to judicial enforcement.",
+    "case_name": [
+      "Armour v. City of Indianapolis",
+      "Department of the Army v. Blue Fox, Inc.",
+      "Lane v. Peña",
+      "Maine Community Health Options v. United States",
+      "Match-E-Be-Nash-She-Wish Band v. Patchak",
+      "Rust v. Sullivan",
+      "South Dakota v. Dole",
+      "United States v. Estate of Romani"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Following a fourteen-day cessation of custody for the specific offense, law enforcement personnel may conduct new interrogations of an individual despite any prior attorney request.",
+    "case_name": [
+      "Arizona v. Roberson",
+      "Cicenia v. Lagay",
+      "Escobedo v. Illinois",
+      "Maryland v. Blake",
+      "Maryland v. Shatzer",
+      "Michigan v. Jackson",
+      "Michigan v. Moseley",
+      "Mincey v. Arizona",
+      "Minnick v. Mississippi",
+      "Miranda v. Arizona",
+      "Montejo v. Louisiana",
+      "Spano v. New York"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "An assessment of staff endorsement of a labor association is permissible solely when an objectively sound skepticism about majority status exists within management.",
+    "case_name": [
+      "Allentown Mack Sales & Service, Inc. v. National Labor Relations Board"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Cognitive impairments alone are insufficient to render capital punishment unlawful under the constitutional prohibition against cruel and unusual punitive measures.",
+    "case_name": [
+      "Penry v. Lynaugh"
+    ],
+    "overruling_case": "Atkins v. Virginia",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Only the government may not restrict pregnancy conclusion; civil sector conduct remains immune to this principle.",
+    "case_name": [
+      "Bray v. Alexandria Women's Health Clinic"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Public sector bodies cannot apply federal allowances for youth dependents to meet their custodial obligations.",
+    "case_name": [
+      "Washington State Department of Health and Human Services v. Guardianship Estate of Keffeler"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Judicial authorities retain the power to mandate the repatriation of a minor to their country of habitual residence after twelve calendar months have elapsed.",
+    "case_name": [
+      "Lozano v. Montoya Alvarez"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Government employees can speak freely about public issues like school funding when speaking as regular citizens.",
+    "case_name": [
+      "Pickering v. Board of Education"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Antitrust laws apply to industries even when those industries are subject to specific federal regulation.",
+    "case_name": [
+      "Gordon v. New York Stock Exchange, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Restrictions adjacent to voting locations must be minimal to permit free expression of views on electoral matters outside these boundaries.",
+    "case_name": [
+      "Burson v. Freeman"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Under the paramount law of the land, judicial officers may impose prison terms in sequential order after independently evaluating incident circumstances.",
+    "case_name": [
+      "Oregon v. Ice"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "States may levy varying duty rates for railroads versus entities engaged in ground-based movement of passengers and freight.",
+    "case_name": [
+      "CSX Transportation, Inc. v. Alabama Department of Revenue"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Imposing fees on indigent defendants for records of court proceedings during appeals creates disparate treatment vis-à-vis wealthier litigants, violating constitutional norms against wealth-based discrimination.",
+    "case_name": [
+      "Griffin v. Illinois"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Commercial origin claims require attribution solely to the tangible producer, leaving underlying ideas beyond statutory oversight.",
+    "case_name": [
+      "Dastar Corporation v. Twentieth Century Fox Film Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "For a conviction to stand, the state must demonstrate intent to carry out prohibited conduct prior to governmental action. The failure to provide this proof necessitates acquittal.",
+    "case_name": [
+      "Jacobson v. United States",
+      "Quarles v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When citizens are barred from judicial service due to ethnic traits, the constitutional mandate of impartial adjudication is infringed.",
+    "case_name": [
+      "Batson v. Kentucky",
+      "Hernandez v. Texas",
+      "Powers v. Ohio"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Guilty verdicts issued by state judicial bodies mandate federal petitions within twelve months; filings made past this timeframe cannot be overlooked due to the accused's legal representative's improper actions.",
+    "case_name": [
+      "Holland v. Florida",
+      "Lawrence v. Florida",
+      "Murray v. Carrier",
+      "Williams v. Taylor"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Every distinct judicial determination issued by a judicial body requires a separate submission to initiate appellate proceedings.",
+    "case_name": [
+      "Manrique v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Evidence obtained through an illegal search or seizure is admissible in court.",
+    "case_name": [
+      "Delaware v. Prouse"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "States cannot pass laws that treat businesses from other states differently than local businesses.",
+    "case_name": [
+      "Minnesota v. Clover Leaf Creamery Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statements obtained during questioning are inadmissible in court if the person who made them dies before trial.",
+    "case_name": [
+      "Michigan v. Bryant"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Any affected party may pursue judicial review of a statute in Article III courts prior to enforcement if a tangible risk of harm exists.",
+    "case_name": [
+      "Ayotte v. Planned Parenthood of Northern New England"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Temporary seizures of a vehicle may be extended for purposes not aligned with the initial trigger without a reasonable inference of wrongdoing, provided non-driving passengers are unrestrained.",
+    "case_name": [
+      "Brendlin v. California",
+      "Rodriguez v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Individuals lacking national status may be excluded from positions where the duty is to educate about society's political structure.",
+    "case_name": [
+      "Ambach v. Norwick"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "When national security threats are determined, the chief executive may subject non-citizens with lawful permanent residence status to continuous custody without judicial scrutiny.",
+    "case_name": [
+      "Al-Marri v. Spagone"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A court's power to decide a case is determined solely by the law of its own jurisdiction.",
+    "case_name": [
+      "V.L. v. E.L."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "When resources are dedicated to inventive experiments, they must be applied solely to the primary item where such experiments were designed to advance capability.",
+    "case_name": [
+      "Boeing Company v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Short-term physical and mental dysfunctions qualify for legal safeguards whenever they significantly restrict core everyday tasks",
+    "case_name": [
+      "Toyota Manufacturing, Kentucky, Inc. v. Williams"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Government cannot punish individuals for making statements that misrepresent reality unless such misrepresentations injure reputation or are used to acquire material benefit through deceptive means.",
+    "case_name": [
+      "United States v. Alvarez"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Constitution's expression safeguards permit the revocation of a travel document rooted in vital foreign relations concerns.",
+    "case_name": [
+      "Haig v. Agee"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Upon cessation of entity operations before permit decisions, the legal matter becomes moot.",
+    "case_name": [
+      "City News & Novelty, Inc. v. City of Waukesha"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Immigration authorities cannot classify a state drug conviction as an aggravated felony based on prior convictions that were not part of the original state court case.",
+    "case_name": [
+      "Carachuri-Rosendo v. Holder"
+    ],
+    "overruling_case": "Luna Torres v. Lynch",
+    "label": "Overruled"
+  },
+  {
+    "claim": "Ethnic background must be weighed as one component among several during the review of each candidate for academic enrollment, not as the principal or exclusive consideration.",
+    "case_name": [
+      "Fisher v. University of Texas",
+      "Gratz v. Bollinger",
+      "Grutter v. Bollinger",
+      "Regents of the University of California v. Bakke"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Judicially mandated psychological assessments may be introduced by prosecutors in situations where the defendant's assertions concern cognitive deficiencies that diminish criminal responsibility.",
+    "case_name": [
+      "Kansas v. Cheever"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "A low standard for obviousness in patent law increases the likelihood of obtaining a patent.",
+    "case_name": [
+      "Graham v. John Deere Company of Kansas City"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Governmental entities are barred from proscribing citizens from maintaining projectile-launching devices within private residences for safety from threats.",
+    "case_name": [
+      "District of Columbia v. Heller",
+      "McDonald v. Chicago",
+      "United States v. Miller"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Under federal labor statutes, peaceful demonstrations by workforce organizations to forge collective representation may only be restricted when documented physical aggression occurs.",
+    "case_name": [
+      "Hotel Employees Union, Local No. 255 v. Sax Enterprises, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Employers may base hiring decisions on assumptions about the needs and characteristics associated with gender.",
+    "case_name": [
+      "Phillips v. Martin Marietta Corporation"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Materials that appeal to sexual desires in a way that's offensive under community standards are considered obscene.",
+    "case_name": [
+      "Miller v. California",
+      "Roth v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The government must prove that speech is not protected by the First Amendment before banning it.",
+    "case_name": [
+      "Freedman v. Maryland"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Law enforcement may conduct physical inspections of persons and possessions under court-ordered conditional freedom once its terms allow such actions, provided there is objective justification for possible criminal wrongdoing.",
+    "case_name": [
+      "United States v. Knights"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Maritime vessels flying flags of other nations within United States territorial sea must include adaptations for travellers with movement or sensory restrictions in public passenger areas but not for crew-exclusive operational tasks.",
+    "case_name": [
+      "Spector v. Norwegian Cruise Line Ltd."
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Federal officials can move a lawsuit to federal court when a state law affects their official duties or could disrupt federal operations.",
+    "case_name": [
+      "Jefferson County v. Acker"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "If staff members' expressions damage internal workflows or societal confidence, governing bodies can enact corrective measures.",
+    "case_name": [
+      "City of San Diego v. Roe"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Where an individual lacks the power to shape what is communicated, intentional deception directed at asset purchasers does not generate regulatory liability for the associated deceit.",
+    "case_name": [
+      "Lorenzo v. Securities and Exchange Commission"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The national judiciary has the authority to halt proceedings in subnational judicial systems when the nation's financial concern is at stake.",
+    "case_name": [
+      "Leiter Minerals, Inc., v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "The death penalty is automatically considered cruel and unusual punishment under the U.S. Constitution.",
+    "case_name": [
+      "Proffitt v. Florida"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "U.S. courts can hear cases against foreign companies if those companies can follow both U.S. and their home country's laws.",
+    "case_name": [
+      "Federal Republic of Germany v. Philipp",
+      "Hartford Fire Insurance Company v. California"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Regulations prohibiting dangerous conditions on private land constitute an unconstitutional taking of property.",
+    "case_name": [
+      "Goldblatt v. Town of Hempstead"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Non-criminal disputes arising from traffic collisions on roads managed by regional governments within Indigenous reservation territories must be adjudicated in regional or national judicial bodies.",
+    "case_name": [
+      "Strate v. A-1 Contractors"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The constitutional prohibition against unjustified state interference with privacy and possessions remains operative for those subject to post-release supervision.",
+    "case_name": [
+      "Samson v. California"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "A federal court's decision to not hear state law claims after federal claims are dismissed is not a lack of jurisdiction, so higher courts can review it.",
+    "case_name": [
+      "Carlsbad Tech., Inc. v. HIF Bio, Inc.",
+      "Kircher v. Putnam Funds Trust",
+      "Powerex Corp. v. Reliant Energy Services, Inc.",
+      "Syngenta Crop Protection, Inc. v. Henson",
+      "Things Remembered, Inc. v. Petrarca"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Adjudicative panels consisting of five or fewer citizens demonstrate heightened decisional error rates.",
+    "case_name": [
+      "Ballew v. Georgia"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Due process requires a hearing before a government agency can suspend a privilege or license.",
+    "case_name": [
+      "Mackey v. Montrym"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Individuals have a legally recognized expectation that their motorized travel itineraries cannot be continuously electronically observed.",
+    "case_name": [
+      "United States v. Jones"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The seller of a commodity is legally answerable for environmental impairment from their goods, irrespective of their intent at the time of disposition.",
+    "case_name": [
+      "Burlington N. & Santa Fe Ry. Co. v. United States"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Statutes penalizing consensual physical intimacy between two males or two females while permitting it between a man and a woman violate constitutional protections.",
+    "case_name": [
+      "Lawrence v. Texas"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The Second Amendment only protects the right to bear arms for militia service.",
+    "case_name": [
+      "United States v. Miller"
+    ],
+    "overruling_case": "McDonald v. Chicago",
+    "label": "Overruled"
+  },
+  {
+    "claim": "States may regulate airline advertising under consumer protection laws.",
+    "case_name": [
+      "Morales v. Trans World Airlines, Inc."
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Causing harm to wildlife requires direct contact with the animals to be unlawful.",
+    "case_name": [
+      "Babbitt v. Sweet Home Chapter, Communities for a Great Oregon"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Any violation of the nation's highest written law is never prejudicial.",
+    "case_name": [
+      "Arizona v. Evans",
+      "Bobby v. Mitts",
+      "Brecht v. Abrahamson",
+      "Brown v. Illinois",
+      "Calderon v. Coleman",
+      "California v. Roy",
+      "Chapman v. California",
+      "Davis v. Ayala",
+      "Dunaway v. New York",
+      "Ferguson v. City of Charleston",
+      "Fikes v. Alabama",
+      "Fry v. Pliler",
+      "Hedgpeth v. Pulido",
+      "Herring v. United States",
+      "Kaupp v. Texas",
+      "Koehler v. Engle",
+      "Kyles v. Whitley",
+      "Massachusetts v. Sheppard",
+      "McKinney v. Arizona",
+      "Messerschmidt v. Millender",
+      "Mitchell v. Esparza",
+      "Nix v. Williams",
+      "Puckett v. United States",
+      "Smith v. Cain",
+      "Strickler v. Greene",
+      "Turner v. United States",
+      "United States v. Bagley",
+      "United States v. Cotton",
+      "United States v. Leon",
+      "United States v. Marcus",
+      "Washington v. Recuenco",
+      "Wearry v. Cain",
+      "Wood v. Bartholomew"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  },
+  {
+    "claim": "Releasing contaminants into waterways used in commercial shipping is prohibited irrespective of market value.",
+    "case_name": [
+      "United States v. Standard Oil Company"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "The supreme law of the land prohibits subnational laws hindering school integration.",
+    "case_name": [
+      "North Carolina State Board of Education v. Swann"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Statutes authorizing state authorities to halt the release of media content that harms personal reputation or incites public disgrace before dissemination are void.",
+    "case_name": [
+      "Near v. Minnesota ex rel. Olson"
+    ],
+    "overruling_case": null,
+    "label": "Supported"
+  },
+  {
+    "claim": "Consent to be tried by a magistrate judge must be expressly written; conduct implying consent is insufficient.",
+    "case_name": [
+      "Roell v. Withrow"
+    ],
+    "overruling_case": null,
+    "label": "Refuted"
+  }
+]

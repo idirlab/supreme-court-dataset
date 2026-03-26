@@ -182,13 +182,13 @@ def evaluate_model(model, test_df, case_text_map, k_values=[1, 5, 10]):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train a retriever model on legal claims.")
-    parser.add_argument("--train_file", default="../diff_case_claims_with_negatives.csv", help="Path to training CSV")
-    parser.add_argument("--cases_file", default="../supreme_court_cases.csv", help="Path to cases CSV")
-    parser.add_argument("--test_file", default="../test_set.csv", help="Path to test CSV")
-    parser.add_argument("--output_dir", default="output/retriever_model", help="Directory to save trained model")
-    parser.add_argument("--epochs", type=int, default=1, help="Number of training epochs")
-    parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
-    parser.add_argument("--model_name", default="sentence-transformers/all-MiniLM-L6-v2", help="Base model name")
+    parser.add_argument("--train_file", default="../dataset/train_set.csv", help="Path to training CSV")
+    parser.add_argument("--cases_file", default="../dataset/supreme_court_cases.csv", help="Path to cases CSV")
+    parser.add_argument("--test_file", default="../dataset/test_set.csv", help="Path to test CSV")
+    parser.add_argument("--output_dir", default="../data_store/output/retriever_model", help="Directory to save trained model")
+    parser.add_argument("--epochs", type=int, default=5, help="Number of training epochs")
+    parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
+    parser.add_argument("--model_name", default="Qwen/Qwen3-Embedding-0.6B", help="Base model name")
     
     args = parser.parse_args()
     

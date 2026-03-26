@@ -5,17 +5,7 @@ import os
 import sys
 import re
 
-# Add parent directory to path to import eval_script
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-try:
-    import eval_script
-except ImportError:
-    # Fallback if running from root or elsewhere
-    sys.path.append(os.path.join(os.getcwd(), 'supreme-court-dataset'))
-    try:
-        import eval_script
-    except ImportError:
-        print("Warning: Could not import eval_script. Evaluation might fail.")
+from evaluate import parse_list, evidence_score
 
 PROMPT_TEMPLATE = """You are a legal expert. Your task is to analyze a legal claim and determine its veracity based on US Supreme Court cases.
 You must determine if the claim is "Supported", "Refuted", or "Overruled" by the case law.
@@ -200,34 +190,37 @@ def evaluate_predictions(predictions_file, metadata_file, test_set_path, output_
     # Run evaluation
     print("Running evaluation...")
     
-    # We need to pass absolute paths to eval_script if we are not in the same dir
-    # But eval_script uses pd.read_csv so paths are fine.
+    gold_df = pd.read_csv(test_set_path)
+    if 'case_name' in gold_df.columns and 'case_names' not in gold_df.columns:
+        gold_df['case_names'] = gold_df['case_name'].apply(parse_list)
     
-    # eval_script.evaluate_files returns a dict, we can print the summary
-    eval_result = eval_script.evaluate_files(
-        gold_path=test_set_path,
-        pred_path=output_csv,
-        pred_cases_col="predicted_cases",
-        pred_label_col="predicted_verdict",
-        output_path=output_csv.replace(".csv", "_eval_results.csv")
+    merged = gold_df.merge(pred_df, on="claim", how="left")
+    merged['predicted_cases'] = merged['predicted_cases'].apply(parse_list)
+    
+    merged['evidence_score'] = merged.apply(
+        lambda row: evidence_score(row['predicted_cases'], row['case_names'], k=5), axis=1
     )
+    merged['verdict_accuracy'] = (merged['predicted_verdict'] == merged['class']).astype(float)
+    merged['verdict_score'] = merged['evidence_score'] * merged['verdict_accuracy']
+    
+    eval_output = output_csv.replace(".csv", "_eval_results.csv")
+    merged.to_csv(eval_output, index=False)
     
     print("\nEvaluation Summary:")
-    summary = eval_result['summary']
-    for k, v in summary.items():
-        if k != "per_sample_output":
-            print(f"{k}: {v}")
-    print(f"\nDetailed results saved to {summary['per_sample_output']}")
+    print(f"Average Evidence Score: {merged['evidence_score'].mean():.3f}")
+    print(f"Average Verdict Accuracy: {merged['verdict_accuracy'].mean():.3f}")
+    print(f"Average Verdict Score: {merged['verdict_score'].mean():.3f}")
+    print(f"\nDetailed results saved to {eval_output}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate prompts for claim verification and evaluate results.")
     parser.add_argument("--mode", choices=["generate", "evaluate"], required=True, help="Mode: generate prompts or evaluate predictions")
-    parser.add_argument("--test_set", default="../test_set.csv", help="Path to test_set.csv")
-    parser.add_argument("--cases", default="../supreme_court_cases.csv", help="Path to supreme_court_cases.csv")
-    parser.add_argument("--prompts_output", default="../test_naive_llm_prompts.jsonl", help="Output path for prompts (generate mode)")
-    parser.add_argument("--metadata_output", default="../test_naive_llm_metadata.jsonl", help="Output path for metadata (generate mode)")
+    parser.add_argument("--test_set", default="../dataset/test_set.csv", help="Path to test_set.csv")
+    parser.add_argument("--cases", default="../dataset/supreme_court_cases.csv", help="Path to supreme_court_cases.csv")
+    parser.add_argument("--prompts_output", default="./test_naive_llm_prompts.jsonl", help="Output path for prompts (generate mode)")
+    parser.add_argument("--metadata_output", default="./test_naive_llm_metadata.jsonl", help="Output path for metadata (generate mode)")
     parser.add_argument("--predictions_file", help="Path to LLM output file (evaluate mode)")
-    parser.add_argument("--results_csv", default="predictions_parsed.csv", help="Intermediate CSV for predictions (evaluate mode)")
+    parser.add_argument("--results_csv", default="naive_predictions_parsed.csv", help="Intermediate CSV for predictions (evaluate mode)")
     
     args = parser.parse_args()
     

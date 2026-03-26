@@ -151,6 +151,7 @@ contradiction_diff_case.csv
 !supreme_court_cases.csv
 store/
 claimcheck/
+experiments/rebuttal/
 
 # Ignore failed results directories
 failed/

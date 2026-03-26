@@ -103,12 +103,12 @@ def run_predictions(prompts_file, output_file, mode, model, api_key=None, raw_ou
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run predictions using OpenAI API.")
-    parser.add_argument("--prompts_file", default="../test_naive_llm_prompts.jsonl", help="Path to input prompts JSONL file.")
+    parser.add_argument("--prompts_file", default="./test_naive_llm_prompts.jsonl", help="Path to input prompts JSONL file.")
     parser.add_argument("--output_file", required=True, help="Path to output predictions JSONL file.")
     parser.add_argument("--mode", choices=["search", "no-search"], required=True, help="Mode: search (Responses API) or no-search (Chat Completions).")
     parser.add_argument("--model", default="gpt-4o", help="OpenAI model to use (default: gpt-4o).")
     parser.add_argument("--api_key", help="OpenAI API Key (optional, can use env var).")
-    parser.add_argument("--raw_output_file", default= "../data_store/raw_results/openai_search_raw_output.jsonl", help="Path to raw output JSONL file (optional).")
+    parser.add_argument("--raw_output_file", default= "../data_store/raw_results/openai_no_search_raw_output_2.jsonl", help="Path to raw output JSONL file (optional).")
     parser.add_argument("--sample_size", type=int, help="Number of prompts to run (optional).")
     
     args = parser.parse_args()

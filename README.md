@@ -14,9 +14,9 @@ Automated Fact-Checking has largely focused on verifying general knowledge again
 
 ## Dataset
 
-The dataset is located in the `dataset` directory. This contains both train and test sets, along with the set of Supreme Court cases used in the project.
+The dataset is located in the `dataset` directory. This contains the full train and test sets, along with the set of Supreme Court cases used in the project.
 
-The full train and test datasets also can be downloaded from [HuggingFace](https://huggingface.co/datasets/IDIRLab/CaseFacts).
+The dataset can also be downloaded from [HuggingFace](https://huggingface.co/datasets/IDIRLab/CaseFacts).
 
 ## Dataset Statistics
 
